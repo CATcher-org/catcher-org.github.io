@@ -1,0 +1,5 @@
+# Ignore Serve Data
+_site/
+
+# Ignore Local Logs
+_markbind/logs
