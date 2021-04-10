@@ -8,7 +8,7 @@
 
 # Get started
 
-You can either use CATcher through your web browser, or download CATcher's desktop application.
+You can either use CATcher through your [web browser](https://catcher-org.github.io/CATcher/), or download CATcher's [desktop application](https://github.com/CATcher-org/CATcher/releases).
 
 Once the app is launched (either web or desktop version), it will prompt you to enter the session you are participating in, using a dropdown.
 
