@@ -12,7 +12,7 @@ You can either use CATcher through your web browser, or download CATcher's deskt
 
 Once the app is launched (either web or desktop version), it will prompt you to enter the session you are participating in, using a dropdown.
 
-<img width="100%" src="https://imgur.com/nBOy7zH.png" />
+<img width="100%" src="{{baseUrl}}/assets/session_select.png" />
 
 <br />
 
