@@ -8,7 +8,7 @@
 
 # Welcome to the CATcher user guide
 
-CATcher is a desktop application for Crowd-sourced Anonymous Testing software. It uses GitHub as the backend for hosting bug reports.
+CATcher is a desktop application for Crowd-sourced Anonymous Testing of software. It uses GitHub as the backend for hosting bug reports.
 
 <div class="clearfix">
   <p>
