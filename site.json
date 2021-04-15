@@ -18,6 +18,10 @@
       "title": "Landing Page"
     },
     {
+      "src": "dg/onboarding-guide.md",
+      "title": "Onboarding Guide"
+    },
+    {
       "glob": ["**/index.md", "**/*.+(md|mbd)"]
     }
   ],
