@@ -18,6 +18,14 @@
       "title": "Landing Page"
     },
     {
+      "src": "ug/setting-up.md",
+      "title": "Setting Up"
+    },
+    {
+      "src": "ug/index.md",
+      "title": "User Guide"
+    },
+    {
       "glob": ["**/index.md", "**/*.+(md|mbd)"]
     }
   ],

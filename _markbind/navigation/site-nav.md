@@ -1,3 +1,3 @@
 <navigation>
-* [User Guide]({{ baseUrl }}/index.html)
+* [Home]({{ baseUrl }}/index.html)
 </navigation>
