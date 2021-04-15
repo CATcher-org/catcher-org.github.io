@@ -6,6 +6,23 @@
       "title": "Landing Page",
       "headings": {},
       "headingKeywords": {}
+    },
+    {
+      "src": "ug/index.md",
+      "title": "User Guide",
+      "headings": {
+        "welcome-to-the-catcher-user-guide": "Welcome to the CATcher user guide"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "ug/setting-up.md",
+      "title": "Setting Up",
+      "headings": {
+        "get-started": "Get started",
+        "notes-on-using-the-web-app": "Notes on Using the Web App"
+      },
+      "headingKeywords": {}
     }
   ]
 }

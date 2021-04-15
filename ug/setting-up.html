@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.18.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Setting Up</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header>
+      <navbar type="dark" class="temp-navbar">
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/assets/catcher_logo.png" width="40"></a>
+        <a href="/index.html" class="nav-link"> HOME </a>
+        <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
+        <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
+        <li slot="right">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/index.html">Introduction</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/setting-up.html" class="current">Setting Up</a></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div id="content-wrapper">
+        <h1 id="get-started"><span id="get-started" class="anchor"></span>Get started<a class="fa fa-anchor" href="#get-started" onclick="event.stopPropagation()"></a></h1>
+        <p>You can either use CATcher through your <a href="https://catcher-org.github.io/CATcher/">web browser</a>, or download CATcher's <a href="https://github.com/CATcher-org/CATcher/releases">desktop application</a>.</p>
+        <p>Once the app is launched (either web or desktop version), it will prompt you to enter the session you are participating in, using a dropdown.</p>
+        <img width="100%" src="/assets/session_select.png">
+        <br>
+        <h1 id="notes-on-using-the-web-app"><span id="notes-on-using-the-web-app" class="anchor"></span>Notes on Using the Web App<a class="fa fa-anchor" href="#notes-on-using-the-web-app" onclick="event.stopPropagation()"></a></h1>
+        <p>The CATcher web app is recommended, and can be
+          accessed at
+          <a href="https://catcher-org.github.io/CATcher">https://catcher-org.github.io/CATcher</a>. Please ensure your browser does not block pop-up windows from our web app.
+        </p>
+        <div class="clearfix">
+          <p>
+            <span class="float-left">
+              <a class="btn btn-light" href="/ug/index.html">
+                <span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span>
+                <span> Introduction</span></a></span>
+          </p>
+        </div>
+        <br>
+        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
+      </div>
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+          <a class="navbar-brand page-nav-title" href="#">Chapters of This Page</a>
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#get-started">Get started&#x200E;</a>
+            <a class="nav-link py-1" href="#notes-on-using-the-web-app">Notes on Using the Web App&#x200E;</a>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.18.1</a>]</small>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = ''
+  MarkBind.setupWithSearch()
+</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
+
+</html>
