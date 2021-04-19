@@ -22,6 +22,8 @@
 
 CATcher is a cross-platform application that utilises several tools. It is recommended that you understand how each tool comes into play before you start working on CATcher.
 
+Under each section we have included the section `Resources Used` which lists official guides and relevant resources used for this documentation. You should refer to these resources to gain a deeper understanding of each tool / framework.
+
 ## Introduction to Angular
 
 Angular is a TypeScript-based web application framework. CATcher is built using Angular and hence our codebase is in Typescript. It is recommended that you familiarise yourself with Typescript as well as Angular before you attempt to work on CATcher.
@@ -30,7 +32,7 @@ Angular is a TypeScript-based web application framework. CATcher is built using 
 
 An Angular application is largely made up of Components, Services, and the corresponding HTML and CSS files for each Component. A Component is a direct representation of visible aspects of an application, while a Service provides useful functionalities to Components where needed. The separation of components and services increases modularity and reusability, as through dependency injection (DI), the service class can provide services to different parts of the application.
 
-For more details on the structure of Angular, visit the Angular Guide via the links below.
+For more details on the structure of Angular, visit the Angular Guide via the links below. It is also recommended for new developers to do a brief walkthrough of the Angular tutorial (link below) before attempting any fixes on CATcher.
 
 <question type="text" header="What is the decorator used to define a service class?"
           keywords="injectable" threshold="0.5" answer="@Injectable()">
@@ -107,6 +109,7 @@ For more information on the RxJS library, visit the links below.
 1. [Angular Guide](https://angular.io/guide/architecture) : Official Angular developer guide and introduction to basic Angular topics
 2. [RxJS Guide](https://rxjs-dev.firebaseapp.com/guide/observable) : Official RxJS guide on Observables, Observers, Operators, Subscription, etc.
 3. [Angular Guide on Navigation of Component Tree](https://angular.io/guide/dependency-injection-navtree) : Guide on how to navigate the component tree with Dependency Injection
+4. [Angular Tutorial](https://angular.io/tutorial) : Official Angular tutorials
 
 ## Introduction to Electron
 
