@@ -107,6 +107,8 @@ GraphQL is a query language for APIs.
 
 In CATcher, it is to communicate with the Github backend. It allows us to define a schema for the data that we receive from github, and also performs validation for the data we reqeust for, such that the data we receive from Github is exactly what we need, nothing more, nothing less. The extra layer of GraphQL is one that makes the process of data retrieval in CATcher more streamlined.
 
+The GraphQL queries used by CATcher are defined under the `graphql` folder in the codebase.
+
 ## Authentication in CATcher
 
 CATcher uses the OAuth 2.0 protocol to authenticate users. Below is a summary of the authentication process:

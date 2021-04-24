@@ -22,49 +22,13 @@
 
 ## Jasmine Style Guide
 
-Jasmine is a behavior-driven development framework specific for testing JavaScript code. We follow the Jasmine Style Guide loosely for our tests.
-
-### Test Suite
-
-Jasmine testing involves the test suite, which is started by calling the global Jasmine function `describe`. The test suite may consist of several tests (specs) within itself, which is done by calling `it`. One main guideline is that a `describe` block should be created for each method / scenario under test, and an `it` block should be created for each property being verified.
-
-### Spy
-
-`Spy` objects are a very important aspect of Javascript tests. They enable users to stub functions and keep track of useful information such as the number of calls to the function, parameters it has been called with, etc.
-
-For example, if function B is called within function A which is under test, the user is able to find out detailed information regarding how function B is called within A by creating a spy object of B. This allows testers to verify that B has indeed been called with the correct arguments correct number of times.
-
-Example of a `Spy` object in CATcher
-```
-describe('DescriptionComponent', () => {
-    beforeEach(() => {
-        ...
-    dialog = jasmine.createSpyObj('MatDialog', ['open']);
-    errorHandlingService = jasmine.createSpyObj('ErrorHandlingService', ['handleError']);
-    issueService = jasmine.createSpyObj('IssueService', ['getLatestIssue', 'updateIssue']);
-        ...
-    });
-
-    it('should update the form value correctly and emit an event when entering edit mode', () => {
-    const descriptionComponentEditState = spyOn(descriptionComponent.changeEditState, 'emit');
-
-    descriptionComponent.ngOnInit();
-    descriptionComponent.changeToEditMode();
-    expect(descriptionComponentEditState).toHaveBeenCalledTimes(1);
-    expect(descriptionComponent.issueDescriptionForm.value).toEqual({ description: thisIssue.description });
-    });
-    ...
-}
-
-```
-The test checks that the method `descriptionComponentEditState` has indeed been called once, and that the value of `issueDescriptionForm` within the `descriptionComponent` is the expected value after update.
-
-You are recommended to read the official Jasmine documentation (Links below) for more details and examples on spies and their functionalities.
+Jasmine is a behavior-driven development framework specific for testing JavaScript code. We follow the Jasmine Style Guide loosely for our tests (Link under [Resources for Jasmine](#resources-for-jasmine)). One main guideline is that a `describe` block should be created for each method / scenario under test, and an `it` block should be created for each property being verified.
 
 ### Resources for Jasmine
 
-1. [Official Jasmine documentation](https://jasmine.github.io/api/3.6/global) : This is the official Jasmine documentation for Jasmine 3.6
-2. [Introduction to Jasmine 2.0](https://jasmine.github.io/2.0/introduction.html) : This is a good summary / introduction of Jasmine test features
+1. [Jasmine Style Guide](https://github.com/CareMessagePlatform/jasmine-styleguide)
+2. [Official Jasmine documentation](https://jasmine.github.io/api/3.6/global) : This is the official Jasmine documentation for Jasmine 3.6
+3. [Introduction to Jasmine 2.0](https://jasmine.github.io/2.0/introduction.html) : This is a good summary / introduction of Jasmine test features
 
 ## Angular TestBed Utility
 
@@ -75,25 +39,7 @@ Steps to set up component tests:
 2. Use `TestBed` function to create the component (fixture) to be tested
 3. Observe HTML changes in the fixture during testing of functions by querying HTML elements of the fixture
 
-Code snippet of a component test in CATcher
-```
-describe('AssigneeComponent', () => {
-    ...
-  // The providers and imports should be based on the component you are testing
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [AssigneeComponent],
-      providers: [IssueService, ErrorHandlingService, PhaseService, PermissionService],
-      imports: [FormsModule, MaterialModule, BrowserAnimationsModule]
-    })
-      .overrideProvider(IssueService, { useValue: issueService })
-      .overrideProvider(PhaseService, { useValue: phaseService })
-      .overrideProvider(PermissionService, { useValue: permissionsService })
-      .compileComponents();
-  }));
-  ...
-}
-```
+You can refer to the [AssigneeComponent test](https://github.com/CATcher-org/CATcher/blob/master/tests/app/shared/issue/assignee/assignee.component.spec.ts) under our main repository for more details on how to set up a component test in CATcher.
 
 ### Resources for Angular TestBed
 1. [Angular Guide - Basics of testing components](https://angular.io/guide/testing-components-basics) : Official Angular developer guide for the basics of component tests
