@@ -68,9 +68,10 @@ For more information on the RxJS library, visit the links below.
 Electron is a tool that allows developers to build cross-platform desktop applications with Javascript, HTML, and CSS. It basically allows us to "convert" the web version of CATcher into a desktop application through the APIs provided by Electron.
 
 ### How Electron Works
-Electron uses the module `ipcMain` to communicate to renderer processes from the main process. It sends out and listen for events, enabling inter-process communication within the CATcher.
+The Electron framework launches a main process and a renderer process.
+The CATcher app runs within the renderer process, while the main process handles system events that occur during the app's lifecycle. Electron provides a message-passing API to facilitate inter-process communication.
 
-Code snippet of `ipcMain` in CATcher
+A snippet from our app's main process code:
 ```
 ipcMain.on('github-oauth', (event, repoPermissionLevel) => {
   Logger.info('Starting authentication');
@@ -84,21 +85,10 @@ ipcMain.on('github-oauth', (event, repoPermissionLevel) => {
   });
 });
 ```
-This starts the authentication flow in the CATcher desktop version. `ipcMain` communicates with the renderer processes by waiting for events from them, as well as emitting events to them.
-
-Because it is a desktop application, it is important that we account for different operating systems in our code, since different operating systems would behave differently to changes in our application.
-
-Example of adapting application logic to Linux O.S.
-```
-  if (isLinuxOs()) {
-    // app icon needs to be set manually on Linux platforms
-    windowOptions['icon'] = ICON_PATH;
-  }
-```
 
 ### Resources for Electron
 
-1. [Official Electron Guide](https://www.electronjs.org/docs/tutorial) : This is the official Electron documentation]
+1. [Official Electron Guide](https://www.electronjs.org/docs/tutorial) : This is the official Electron documentation
 
 
 ## Introduction to GraphQL

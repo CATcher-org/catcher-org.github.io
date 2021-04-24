@@ -9,9 +9,7 @@
 # Introduction to Tests in CATcher
 
 1. [Jasmine Style Guide](#jasmine-style-guide)
-    1. [Test Suite](#test-suite)
-    2. [Spy](#spy)
-    3. [Resources for Jasmine](#resources-for-jasmine)
+    1. [Resources for Jasmine](#resources-for-jasmine)
 2. [Angular TestBed Utility](#angular-testbed-utility)
     1. [Resources for Angular TestBed](#resources-for-angular-testbed)
 3. [E2E Testing](#e2e-testing)
