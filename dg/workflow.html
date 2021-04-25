@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.18.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Setting Up</title>
+  <title></title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
@@ -44,10 +44,22 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="site-nav-list site-nav-list-root">
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/index.html">Introduction</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/index.html">Introduction</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/setting-up.html" class="current">Setting Up</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tools-frameworks.html">Tools and Frameworks in CATcher</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tests.html">Tests in CATcher</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/workflow.html" class="current">Workflow of CATcher</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/getting-started.html">Getting Started</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/future-developments.html">Future Developments</a></div>
             </li>
           </ul>
         </div>
@@ -55,22 +67,26 @@
 
 
       <div id="content-wrapper">
-        <h1 id="get-started"><span id="get-started" class="anchor"></span>Get started<a class="fa fa-anchor" href="#get-started" onclick="event.stopPropagation()"></a></h1>
-        <p>You can either use CATcher through your <a href="https://catcher-org.github.io/CATcher/">web browser</a>, or download CATcher's <a href="https://github.com/CATcher-org/CATcher/releases">desktop application</a>.</p>
-        <p>Once the app is launched (either web or desktop version), it will prompt you to enter the session you are participating in, using a dropdown.</p>
-        <img width="100%" src="/assets/session_select.png">
-        <br>
-        <h1 id="notes-on-using-the-web-app"><span id="notes-on-using-the-web-app" class="anchor"></span>Notes on Using the Web App<a class="fa fa-anchor" href="#notes-on-using-the-web-app" onclick="event.stopPropagation()"></a></h1>
-        <p>The CATcher web app is recommended, and can be
-          accessed at
-          <a href="https://catcher-org.github.io/CATcher">https://catcher-org.github.io/CATcher</a>. Please ensure your browser does not block pop-up windows from our web app.
+        <h1 id="workflow-of-catcher"><span id="workflow-of-catcher" class="anchor"></span>Workflow of CATcher<a class="fa fa-anchor" href="#workflow-of-catcher" onclick="event.stopPropagation()"></a></h1>
+        <p>The following is the workflow that contributors need to follow when proposing changes to CATcher.</p>
+        <ol>
+          <li><a href="#submitting-prs">Submitting PRs</a></li>
+        </ol>
+        <h2 id="submitting-prs"><span id="submitting-prs" class="anchor"></span>Submitting PRs<a class="fa fa-anchor" href="#submitting-prs" onclick="event.stopPropagation()"></a></h2>
+        <p>When a pull request is merged, it should be accompanied by a helpful commit message. Hence, contributors are recommended to propose a commit message for their pull requests.
+          <a href="https://oss-generic.github.io/process/docs/FormatsAndConventions.html#commit-message">Here</a> are
+          some good guidelines for crafting the commit message.
         </p>
         <div class="clearfix">
           <p>
             <span class="float-left">
-              <a class="btn btn-light" href="/ug/index.html">
+              <a class="btn btn-light" href="/dg/tests.html">
                 <span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span>
-                <span> Introduction</span></a></span>
+                <span> Tests in CATcher </span></a></span>
+            <span class="float-right">
+              <a class="btn btn-light" href="/dg/getting-started.html">
+                <span> Getting Started </span>
+                <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></a></span>
           </p>
         </div>
         <br>
@@ -80,8 +96,10 @@
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
           <a class="navbar-brand page-nav-title" href="#">Chapters of This Page</a>
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#get-started">Get started&#x200E;</a>
-            <a class="nav-link py-1" href="#notes-on-using-the-web-app">Notes on Using the Web App&#x200E;</a>
+            <a class="nav-link py-1" href="#workflow-of-catcher">Workflow of CATcher&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#submitting-prs">Submitting PRs&#x200E;</a>
+            </nav>
 
           </nav>
         </div>

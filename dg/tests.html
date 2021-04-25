@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.18.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header>
+      <navbar type="dark" class="temp-navbar">
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/assets/catcher_logo.png" width="40"></a>
+        <a href="/index.html" class="nav-link"> HOME </a>
+        <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
+        <a href="/dg/index.html" class="nav-link"> DEVELOPER GUIDE </a>
+        <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
+        <li slot="right">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/index.html">Introduction</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tools-frameworks.html">Tools and Frameworks in CATcher</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tests.html" class="current">Tests in CATcher</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/workflow.html">Workflow of CATcher</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/getting-started.html">Getting Started</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/future-developments.html">Future Developments</a></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div id="content-wrapper">
+        <h1 id="introduction-to-tests-in-catcher"><span id="introduction-to-tests-in-catcher" class="anchor"></span>Introduction to Tests in CATcher<a class="fa fa-anchor" href="#introduction-to-tests-in-catcher" onclick="event.stopPropagation()"></a></h1>
+        <ol>
+          <li><a href="#jasmine-style-guide">Jasmine Style Guide</a>
+            <ol>
+              <li><a href="#resources-for-jasmine">Resources for Jasmine</a></li>
+            </ol>
+          </li>
+          <li><a href="#angular-testbed-utility">Angular TestBed Utility</a>
+            <ol>
+              <li><a href="#resources-for-angular-testbed">Resources for Angular TestBed</a></li>
+            </ol>
+          </li>
+          <li><a href="#e2e-testing">E2E Testing</a>
+            <ol>
+              <li><a href="#running-e2e-tests">Running E2E Tests</a></li>
+              <li><a href="#troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver">Troubleshooting conflicts between the versions of the browser and browser driver</a></li>
+              <li><a href="#protractor-configuration">Protractor Configuration</a></li>
+              <li><a href="#how-the-e2e-tests-work">How the E2E tests work</a></li>
+            </ol>
+          </li>
+        </ol>
+        <h2 id="jasmine-style-guide"><span id="jasmine-style-guide" class="anchor"></span>Jasmine Style Guide<a class="fa fa-anchor" href="#jasmine-style-guide" onclick="event.stopPropagation()"></a></h2>
+        <p>Jasmine is a behavior-driven development framework specific for testing JavaScript code. We follow the Jasmine Style Guide loosely for our tests (Link under <a href="#resources-for-jasmine">Resources for Jasmine</a>). One main guideline is that a <code class="hljs inline no-lang" v-pre>describe</code> block should be created for each method / scenario under test, and an <code class="hljs inline no-lang" v-pre>it</code> block should be created for each property being verified.</p>
+        <h3 id="resources-for-jasmine"><span id="resources-for-jasmine" class="anchor"></span>Resources for Jasmine<a class="fa fa-anchor" href="#resources-for-jasmine" onclick="event.stopPropagation()"></a></h3>
+        <ol>
+          <li><a href="https://github.com/CareMessagePlatform/jasmine-styleguide">Jasmine Style Guide</a></li>
+          <li><a href="https://jasmine.github.io/api/3.6/global">Official Jasmine documentation</a> : This is the official Jasmine documentation for Jasmine 3.6</li>
+          <li><a href="https://jasmine.github.io/2.0/introduction.html">Introduction to Jasmine 2.0</a> : This is a good summary / introduction of Jasmine test features</li>
+        </ol>
+        <h2 id="angular-testbed-utility"><span id="angular-testbed-utility" class="anchor"></span>Angular TestBed Utility<a class="fa fa-anchor" href="#angular-testbed-utility" onclick="event.stopPropagation()"></a></h2>
+        <p>Because the above Jasmine framework does not test the DOM, we require the Angular TestBed Utility functions to set up component tests for testing HTML / view changes of components in CATcher.</p>
+        <p>Steps to set up component tests:</p>
+        <ol>
+          <li>Configure the testing module through <code class="hljs inline no-lang" v-pre>TestBed</code> function <code class="hljs inline no-lang" v-pre>configureTestingModule</code> with the corresponding component's settings</li>
+          <li>Use <code class="hljs inline no-lang" v-pre>TestBed</code> function to create the component (fixture) to be tested</li>
+          <li>Observe HTML changes in the fixture during testing of functions by querying HTML elements of the fixture</li>
+        </ol>
+        <p>You can refer to the <a href="https://github.com/CATcher-org/CATcher/blob/master/tests/app/shared/issue/assignee/assignee.component.spec.ts">AssigneeComponent test</a> under our main repository for more details on how to set up a component test in CATcher.</p>
+        <h3 id="resources-for-angular-testbed"><span id="resources-for-angular-testbed" class="anchor"></span>Resources for Angular TestBed<a class="fa fa-anchor" href="#resources-for-angular-testbed" onclick="event.stopPropagation()"></a></h3>
+        <ol>
+          <li><a href="https://angular.io/guide/testing-components-basics">Angular Guide - Basics of testing components</a> : Official Angular developer guide for the basics of component tests</li>
+          <li><a href="https://angular.io/api/core/testing/ComponentFixture">Angular Guide - Component Fixture</a> : Official Angular developer guide on <code class="hljs inline no-lang" v-pre>ComponentFixture</code></li>
+          <li><a href="https://www.digitalocean.com/community/tutorials/angular-introduction-unit-testing#:~:text=Fixtures%20have%20access%20to%20a,Angular%20to%20run%20change%20detection.">Introduction to Unit Testing in Angular</a> : Useful article on how to test component fixtures</li>
+        </ol>
+        <h2 id="e2e-testing"><span id="e2e-testing" class="anchor"></span>E2E Testing<a class="fa fa-anchor" href="#e2e-testing" onclick="event.stopPropagation()"></a></h2>
+        <h3 id="running-e2e-tests"><span id="running-e2e-tests" class="anchor"></span>Running E2E Tests<a class="fa fa-anchor" href="#running-e2e-tests" onclick="event.stopPropagation()"></a></h3>
+        <p>E2E Tests can be executed using <code class="hljs inline no-lang" v-pre>npm run e2e</code>. You should see CATcher launch in an instance of Google Chrome, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine.</p>
+        <p>Unlike the production version of CATcher, we do not use the actual GitHub API in the E2E tests. Mock data is used to simulate the GitHub API. You can run <code class="hljs inline no-lang" v-pre>npm run ng:serve:test</code> to run CATcher in this &quot;offline&quot; mode (to further develop or debug the E2E tests).
+          The following additional parameters would allow for further customisation,</p>
+        <div class="table-responsive">
+          <table class="markbind-table table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th style="text-align:center">Additional Parameter</th>
+                <th style="text-align:center">Default</th>
+                <th style="text-align:center">Description</th>
+                <th style="text-align:center">Full Command Example</th>
+                <th style="text-align:center">Command Explanation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="text-align:center"><code class="hljs inline no-lang" v-pre>--protractor-config=e2e/protractor.*.conf.js</code></td>
+                <td style="text-align:center"><code class="hljs inline no-lang" v-pre>protractor.conf.js</code></td>
+                <td style="text-align:center">Allows selection of the Protractor configuration file</td>
+                <td style="text-align:center"><code class="hljs inline no-lang" v-pre>npm run e2e -- --protractor-config=e2e/protractor.firefox.conf.js</code></td>
+                <td style="text-align:center">Runs E2E Tests on the Firefox Browser</td>
+              </tr>
+              <tr>
+                <td style="text-align:center"><code class="hljs inline no-lang" v-pre>--suite=*</code></td>
+                <td style="text-align:center">All Suites</td>
+                <td style="text-align:center">Runs E2E Tests for specific suites</td>
+                <td style="text-align:center"><code class="hljs inline no-lang" v-pre>npm run e2e -- --suite=login,bugReporting</code></td>
+                <td style="text-align:center">Run E2E Tests from Login and BugReporting Suites only</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>TO NOTE:</strong></p>
+        <ul>
+          <li>Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox).</li>
+        </ul>
+        <h3 id="troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver"><span id="troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver" class="anchor"></span>Troubleshooting conflicts between the versions of the browser and browser driver<a class="fa fa-anchor" href="#troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver" onclick="event.stopPropagation()"></a></h3>
+        <p>If tests fail on your machine due to mismatches between the versions of the browser and the browser driver, you can use the <a href="https://github.com/angular/webdriver-manager#readme"><code class="hljs inline no-lang" v-pre>webdriver-manager</code></a> tool to install the right version of the driver. By default, running <code class="hljs inline no-lang" v-pre>webdriver-manager update</code> updates all drivers to the latest version, but particular versions can be specified as options.</p>
+        <h3 id="protractor-configuration"><span id="protractor-configuration" class="anchor"></span>Protractor Configuration<a class="fa fa-anchor" href="#protractor-configuration" onclick="event.stopPropagation()"></a></h3>
+        <p>E2E Tests are run using <a href="http://www.protractortest.org/#/">Protractor</a> testing framework.</p>
+        <ul>
+          <li>Protractor primarily requires the <code class="hljs inline no-lang" v-pre>*.conf.js</code> files to define E2E Testing Environments (this includes Browser Details, Base URL, etc...)</li>
+          <li>The base configuration data is stored in <code class="hljs inline no-lang" v-pre>protractor.base.conf.js</code> which is then extended by separate configuration files for individual browsers as well as the CI/CD pipeline.</li>
+          <li>E2E Tests are typically split into <code class="hljs inline no-lang" v-pre>Page-Objects Files</code> and <code class="hljs inline no-lang" v-pre>Test Files</code> in accordance with the <a href="http://www.protractortest.org/#/style-guide">Protractor Style Guide</a> (more information regarding the interaction between the aforementioned filetypes can be found there).</li>
+          <li>E2E Tests are also grouped into suites based on the Application's Phase (i.e. Login, Bug-Reporting). Currently defined suite information is located in the <code class="hljs inline no-lang" v-pre>protractor.base.conf.js</code> file as well.</li>
+        </ul>
+        <h3 id="how-the-e2e-tests-work"><span id="how-the-e2e-tests-work" class="anchor"></span>How the E2E tests work<a class="fa fa-anchor" href="#how-the-e2e-tests-work" onclick="event.stopPropagation()"></a></h3>
+        <p>E2E Tests are run with the following stages:</p>
+        <ol>
+          <li>Build CATcher using <code class="hljs inline no-lang" v-pre>test</code> architecture
+            <ul>
+              <li>Using <code class="hljs inline no-lang" v-pre>test</code> build configuration located in <code class="hljs inline no-lang" v-pre>angular.json</code> under <code class="hljs inline no-lang" v-pre>projects.catcher.architect.configurations</code> we build a version of CATcher within a test environment that replaces <code class="hljs inline no-lang" v-pre>src/environments/environment.ts</code> with <code class="hljs inline no-lang" v-pre>src/environments/environment.test.ts</code> on runtime. This file provides data that allows CATcher to switch into &quot;E2E test&quot; mode.</li>
+            </ul>
+          </li>
+          <li>Provide Test Environment Information
+            <ul>
+              <li>The Test Environment (in <code class="hljs inline no-lang" v-pre>src/environments/environment.test.ts</code>) provides information such as,
+                <ul>
+                  <li>Login Credentials (Username).</li>
+                  <li>User Role and Team Information.</li>
+                  <li>A <code class="hljs inline no-lang" v-pre>test</code> flag that is set to <code class="hljs inline no-lang" v-pre>true</code>, so that CATcher switches into &quot;E2E test mode&quot;</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Mock Service Injections
+            <ul>
+              <li>Once CATcher switches to E2E test mode, it creates mocks of some services, in order to simulate behaviour that is outside the scope of E2E Testing. This includes authentication, and communication with GitHub (via its APIs).</li>
+              <li>These Service Injections are carried out in the respective <code class="hljs inline no-lang" v-pre>*-module.ts</code> files with the help of Factories (located in <code class="hljs inline no-lang" v-pre>/src/app/core/services/factories</code>) that check the current build environment and make the Service Replacements accordingly.</li>
+            </ul>
+          </li>
+          <li>Browser Action Automation using Protractor
+            <ul>
+              <li>With the application ready for testing, we then utilize <code class="hljs inline no-lang" v-pre>Protractor</code> to run test cases that are located in the <code class="hljs inline no-lang" v-pre>/e2e</code> directory.</li>
+            </ul>
+          </li>
+        </ol>
+        <div class="clearfix">
+          <p>
+            <span class="float-left">
+              <a class="btn btn-light" href="/dg/tools-frameworks.html">
+                <span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span>
+                <span> Introduction to Tools and Frameworks used in CATcher </span></a></span>
+            <span class="float-right">
+              <a class="btn btn-light" href="/dg/workflow.html">
+                <span>Workflow of CATcher</span>
+                <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></a></span>
+          </p>
+        </div>
+        <br>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
+      </div>
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+          <a class="navbar-brand page-nav-title" href="#">Chapters of This Page</a>
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#introduction-to-tests-in-catcher">Introduction to Tests in CATcher&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#jasmine-style-guide">Jasmine Style Guide&#x200E;</a>
+              <a class="nav-link py-1" href="#angular-testbed-utility">Angular TestBed Utility&#x200E;</a>
+              <a class="nav-link py-1" href="#e2e-testing">E2E Testing&#x200E;</a>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.18.1</a>]</small>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = ''
+  MarkBind.setupWithSearch()
+</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
+
+</html>

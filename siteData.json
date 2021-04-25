@@ -2,6 +2,81 @@
   "enableSearch": true,
   "pages": [
     {
+      "src": "dg/future-developments.md",
+      "title": "",
+      "headings": {
+        "future-developments": "Future Developments",
+        "support-commenting": "Support Commenting"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/getting-started.md",
+      "title": "",
+      "headings": {
+        "getting-started": "Getting Started",
+        "setting-up": "Setting Up",
+        "prerequisites": "Prerequisites",
+        "steps-for-setting-up": "Steps for Setting Up",
+        "debugging-with-visual-studio-code": "Debugging with Visual Studio Code",
+        "commands": "Commands",
+        "good-first-issues": "Good First Issues",
+        "releasing-a-new-version-of-catcher": "Releasing a New Version of CATcher"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/index.md",
+      "title": "Onboarding Guide",
+      "headings": {
+        "welcome-to-the-catcher-developer-guide": "Welcome to the CATcher Developer Guide"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/tests.md",
+      "title": "",
+      "headings": {
+        "introduction-to-tests-in-catcher": "Introduction to Tests in CATcher",
+        "jasmine-style-guide": "Jasmine Style Guide",
+        "resources-for-jasmine": "Resources for Jasmine",
+        "angular-testbed-utility": "Angular TestBed Utility",
+        "resources-for-angular-testbed": "Resources for Angular TestBed",
+        "e2e-testing": "E2E Testing",
+        "running-e2e-tests": "Running E2E Tests",
+        "troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver": "Troubleshooting conflicts between the versions of the browser and browser driver",
+        "protractor-configuration": "Protractor Configuration",
+        "how-the-e2e-tests-work": "How the E2E tests work"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/tools-frameworks.md",
+      "title": "",
+      "headings": {
+        "introduction-to-tools-and-frameworks-used-in-catcher": "Introduction to Tools and Frameworks used in CATcher",
+        "introduction-to-angular": "Introduction to Angular",
+        "angular-structure": "Angular Structure",
+        "rxjs-library": "RxJS Library",
+        "resources-for-angular": "Resources for Angular",
+        "introduction-to-electron": "Introduction to Electron",
+        "how-electron-works": "How Electron Works",
+        "resources-for-electron": "Resources for Electron",
+        "introduction-to-graphql": "Introduction to GraphQL",
+        "authentication-in-catcher": "Authentication in CATcher"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/workflow.md",
+      "title": "",
+      "headings": {
+        "workflow-of-catcher": "Workflow of CATcher",
+        "submitting-prs": "Submitting PRs"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "index.md",
       "title": "Landing Page",
       "headings": {},
