@@ -26,6 +26,10 @@
       "title": "User Guide"
     },
     {
+      "src": "dg/index.md",
+      "title": "Onboarding Guide"
+    },
+    {
       "glob": ["**/index.md", "**/*.+(md|mbd)"]
     }
   ],
