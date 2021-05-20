@@ -1,34 +1,57 @@
 <frontmatter>
   header: header.md
+  title: "DG: Testing"
   pageNav: 2
-  pageNavTitle: "Chapters of This Page"
   siteNav: dg-nav.md
   footer: footer.md
 </frontmatter>
 
-# Introduction to Tests in CATcher
+# Testing
 
-1. [Jasmine Style Guide](#jasmine-style-guide)
-    1. [Resources for Jasmine](#resources-for-jasmine)
-2. [Angular TestBed Utility](#angular-testbed-utility)
-    1. [Resources for Angular TestBed](#resources-for-angular-testbed)
-3. [E2E Testing](#e2e-testing)
-    1. [Running E2E Tests](#running-e2e-tests)
-    2. [Troubleshooting conflicts between the versions of the browser and browser driver](#troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver)
-    3. [Protractor Configuration](#protractor-configuration)
-    4. [How the E2E tests work](#how-the-e2e-tests-work)
+This page contains information useful for testing of CATcher.
 
-## Jasmine Style Guide
+-------------------------------------------------------------------------------------
+
+## Loading custom sessions
+
+This is a hidden CATcher feature useful for manual testing.
+
+If your sessions are not present in the default dropdown list on CATcher's startup page, you can load custom sessions by clicking on the **file icon** beside the session dropdown.
+
+Following which, submit a file with the `.json` file extension, where the format is specified below.
+
+```json
+{
+"profiles": [
+    {
+      "profileName": "CATcher",
+      "encodedText": "CATcher-org/public_data"
+    }
+  ]
+}
+```
+
+The json supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `encodedText` fields.
+
+`profileName` refers to the profile name displayed in the session select page. `encodedText` refers to the repository which stores the required settings for your custom session. The `encodedText` will be in the format of `organisation/repository`.
+
+> **Note**: You **must** have both of these fields in each `Profile` and the values for these fields **should not be empty**! Else, the `.json` file that you have supplied will not be parsed successfully.
+
+-------------------------------------------------------------------------------------
+
+## Testing with Jasmine
 
 Jasmine is a behavior-driven development framework specific for testing JavaScript code. We follow the Jasmine Style Guide loosely for our tests (Link under [Resources for Jasmine](#resources-for-jasmine)). One main guideline is that a `describe` block should be created for each method / scenario under test, and an `it` block should be created for each property being verified.
 
-### Resources for Jasmine
+****Resources:****
 
 1. [Jasmine Style Guide](https://github.com/CareMessagePlatform/jasmine-styleguide)
 2. [Official Jasmine documentation](https://jasmine.github.io/api/3.6/global) : This is the official Jasmine documentation for Jasmine 3.6
 3. [Introduction to Jasmine 2.0](https://jasmine.github.io/2.0/introduction.html) : This is a good summary / introduction of Jasmine test features
 
-## Angular TestBed Utility
+-------------------------------------------------------------------------------------
+
+## Angular testBed utility
 
 Because the above Jasmine framework does not test the DOM, we require the Angular TestBed Utility functions to set up component tests for testing HTML / view changes of components in CATcher.
 
@@ -39,16 +62,18 @@ Steps to set up component tests:
 
 You can refer to the [AssigneeComponent test](https://github.com/CATcher-org/CATcher/blob/master/tests/app/shared/issue/assignee/assignee.component.spec.ts) under our main repository for more details on how to set up a component test in CATcher.
 
-### Resources for Angular TestBed
+****Resources:****
 1. [Angular Guide - Basics of testing components](https://angular.io/guide/testing-components-basics) : Official Angular developer guide for the basics of component tests
 2. [Angular Guide - Component Fixture](https://angular.io/api/core/testing/ComponentFixture) : Official Angular developer guide on `ComponentFixture`
 3. [Introduction to Unit Testing in Angular](https://www.digitalocean.com/community/tutorials/angular-introduction-unit-testing#:~:text=Fixtures%20have%20access%20to%20a,Angular%20to%20run%20change%20detection.) : Useful article on how to test component fixtures
 
-## E2E Testing
+-------------------------------------------------------------------------------------
 
-### Running E2E Tests
+## E2E testing
 
-E2E Tests can be executed using `npm run e2e`. You should see CATcher launch in an instance of Google Chrome, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine.
+### Running E2E tests
+
+<tooltip content="end-to-end tests">E2E tests</tooltip> can be executed using `npm run e2e`. You should see CATcher launch in an instance of Google Chrome, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine.
 
 Unlike the production version of CATcher, we do not use the actual GitHub API in the E2E tests. Mock data is used to simulate the GitHub API. You can run `npm run ng:serve:test` to run CATcher in this "offline" mode (to further develop or debug the E2E tests).
 The following additional parameters would allow for further customisation,
@@ -58,8 +83,10 @@ The following additional parameters would allow for further customisation,
 | `--protractor-config=e2e/protractor.*.conf.js` | `protractor.conf.js` | Allows selection of the Protractor configuration file | `npm run e2e -- --protractor-config=e2e/protractor.firefox.conf.js` | Runs E2E Tests on the Firefox Browser |
 | `--suite=*` | All Suites | Runs E2E Tests for specific suites | `npm run e2e -- --suite=login,bugReporting` | Run E2E Tests from Login and BugReporting Suites only |
 
-**TO NOTE:**
-- Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox).
+<box type="warning" seamless>
+
+Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox).
+</box>
 
 ### Troubleshooting conflicts between the versions of the browser and browser driver
 
@@ -90,21 +117,3 @@ E2E Tests are run with the following stages:
 4. Browser Action Automation using Protractor
    - With the application ready for testing, we then utilize `Protractor` to run test cases that are located in the `/e2e` directory.
 
-
-<div class="clearfix">
-  <p>
-    <span class="float-left">
-      <a class="btn btn-light" href="{{ baseUrl }}/dg/tools-frameworks.html">
-        <span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span>
-        <span> Introduction to Tools and Frameworks used in CATcher </span>
-      </a>
-    </span>
-    <span class="float-right">
-      <a class="btn btn-light" href="{{ baseUrl }}/dg/workflow.html">
-        <span>Workflow of CATcher</span>
-        <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span>
-      </a>
-    </span>
-  </p>
-</div>
-<br/>

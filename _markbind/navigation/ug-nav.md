@@ -1,4 +1,4 @@
 <navigation>
-* [Introduction]({{ baseUrl }}/ug/index.html)
-* [Setting Up]({{ baseUrl }}/ug/setting-up.html)
+* [For students]({{ baseUrl }}/ug/index.html)
+* [For instructors]({{ baseUrl }}/ug/instructors.html)
 </navigation>
