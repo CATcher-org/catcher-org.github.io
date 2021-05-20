@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.18.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>User Guide</title>
+  <title>CATcher - UG: for students</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.min.css">
   <script src="../markbind/js/polyfill.min.js"></script>
   <script src="../markbind/js/vue.min.js"></script>
@@ -27,10 +27,11 @@
   <div id="app">
     <header>
       <navbar type="dark" class="temp-navbar">
-        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/assets/catcher_logo.png" width="40"></a>
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/images/catcher_logo.png" width="40"></a>
         <a href="/index.html" class="nav-link"> HOME </a>
         <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
         <a href="/dg/index.html" class="nav-link"> DEVELOPER GUIDE </a>
+        <a href="/about-us.html" class="nav-link"> ABOUT US </a>
         <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
         <li slot="right">
           <form class="navbar-form">
@@ -44,10 +45,10 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="site-nav-list site-nav-list-root">
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/index.html" class="current">Introduction</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/index.html" class="current">For students</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/setting-up.html">Setting Up</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/instructors.html">For instructors</a></div>
             </li>
           </ul>
         </div>
@@ -55,24 +56,86 @@
 
 
       <div id="content-wrapper">
-        <h1 id="welcome-to-the-catcher-user-guide"><span id="welcome-to-the-catcher-user-guide" class="anchor"></span>Welcome to the CATcher user guide<a class="fa fa-anchor" href="#welcome-to-the-catcher-user-guide" onclick="event.stopPropagation()"></a></h1>
-        <p>CATcher is a cross platform application for Crowd-sourced Anonymous Testing of software. It uses GitHub as the backend for hosting bug reports.</p>
-        <div class="clearfix">
-          <p>
-            <span class="float-right">
-              <a class="btn btn-light" href="/ug/setting-up.html">
-                <span>Setting Up</span>
-                <span aria-hidden="true" class="far fa-arrow-alt-circle-right"></span></a></span>
-          </p>
-        </div>
+        <h1 id="catcher-user-guide-for-students"><span id="catcher-user-guide-for-students" class="anchor"></span>CATcher User Guide (for students)<a class="fa fa-anchor" href="#catcher-user-guide-for-students" onclick="event.stopPropagation()"></a></h1>
+        <hr>
+        <h2 id="getting-started"><span id="getting-started" class="anchor"></span>Getting started<a class="fa fa-anchor" href="#getting-started" onclick="event.stopPropagation()"></a></h2>
+        <p><strong>The online version of CATcher is available at <a href="https://catcher-org.github.io/CATcher">https://catcher-org.github.io/CATcher</a></strong>. Alternatively, you can download the <a href="https://github.com/CATcher-org/CATcher/releases">desktop version</a>.</p>
+        <p>Once the app is launched (either web or desktop version), it will prompt you to enter the session you are participating in, using a dropdown.</p>
+        <img width="70%" src="/images/session_select.png">
         <br>
+        <hr>
+        <h2 id="using-the-web-app"><span id="using-the-web-app" class="anchor"></span>Using the Web app<a class="fa fa-anchor" href="#using-the-web-app" onclick="event.stopPropagation()"></a></h2>
+        <p>The CATcher web app is recommended, and can be accessed at <a href="https://catcher-org.github.io/CATcher">https://catcher-org.github.io/CATcher</a>. Please ensure your browser does not block pop-up windows from our web app.</p>
+        <p>Ad-blockers may need to be disabled if they block pop-ups.</p>
+        <h3 id="safari-users"><span id="safari-users" class="anchor"></span>Safari users<a class="fa fa-anchor" href="#safari-users" onclick="event.stopPropagation()"></a></h3>
+        <p>Pop-up windows are blocked by default on Safari. Before launching CATcher, please enable pop-ups by following the steps below:</p>
+        <ol>
+          <li>Go to Preferences &gt; Websites &gt; Pop-up Windows</li>
+          <li>For website <code class="hljs inline no-lang" v-pre>catcher-org.github.io</code>, choose option <code class="hljs inline no-lang" v-pre>Allow</code>
+            <a href="/images/safari-allow-popups.png" target="_self"><img src="/images/safari-allow-popups.png" alt class="img-fluid"></a>
+          </li>
+        </ol>
+        <h2 id="using-the-desktop-app"><span id="using-the-desktop-app" class="anchor"></span>Using the desktop app<a class="fa fa-anchor" href="#using-the-desktop-app" onclick="event.stopPropagation()"></a></h2>
+        <p>The latest release of the CATcher desktop app can be downloaded from <a href="https://github.com/CATcher-org/CATcher/releases">https://github.com/CATcher-org/CATcher/releases</a></p>
+        <p>Start the desktop app by clicking on the executable file; no installation is required.</p>
+        <tabs>
+          <tab><template slot="_header">Windows</template>
+            <p>For normal usage, you can run the <code class="hljs inline no-lang" v-pre>CATcher.exe</code> and the following dialog would appear. Simply click on the &quot;More Info&quot; button and then click the &quot;Run Anyway&quot; button which would have appeared on the bottom right corner of the dialog.</p>
+            <p><a href="/images/windows-security-warning.png" target="_self"><img src="/images/windows-security-warning.png" alt class="img-fluid"></a></p>
+            <p>In some cases, the &quot;Run Anyway&quot; button may not appear. To troubleshoot this, you can open up &quot;Windows Security&quot; and under &quot;App &amp; browser control&quot;, click on &quot;Reputation-based protection settings&quot; and make sure CATcher is not blocked here.</p>
+            <p>If you are using an older version of Windows, you may not be able to find the &quot;Reputation-based protection settings&quot;. Under &quot;App and browser control&quot;, you would instead see &quot;Check apps and files&quot;. In this section, make sure it is set to &quot;Warn&quot;.</p>
+          </tab>
+          <tab><template slot="_header">Mac</template>
+            <p>To run CATcher on MacOS, you would need to go to &quot;System Preferences&quot; and in &quot;Security &amp; Privacy&quot;, select &quot;Open Anyway&quot; for CATcher, as shown below.</p>
+            <p><a href="/images/mac-security-warning.png" target="_self"><img src="/images/mac-security-warning.png" alt class="img-fluid"></a></p>
+            <h3 id="troubleshooting"><span id="troubleshooting" class="anchor"></span>Troubleshooting<a class="fa fa-anchor" href="#troubleshooting" onclick="event.stopPropagation()"></a></h3>
+            <ol>
+              <li>Copy and pasting images into the text editor for Mac Users</li>
+            </ol>
+            <p>You may find you are not able to copy (Cmd+c) and paste (Cmd+v) an image from the &quot;Preview&quot; application. As a workaround, there are other ways to paste stuff into the text editor such as dragging and dropping a screenshot image or a file.</p>
+          </tab>
+          <tab><template slot="_header">Linux</template>
+            <p>After downloading the AppImage file, you should be able to run CATcher by clicking on the
+              AppImage file.
+              If this does not work, you may need to allow the file to be executed.
+              There are 2 methods to achieve this:</p>
+            <ul>
+              <li>From the GUI:</li>
+              <li>Right click on the file icon</li>
+              <li>Select <code class="hljs inline no-lang" v-pre>Properties</code>, then select <code class="hljs inline no-lang" v-pre>Permissions</code></li>
+              <li>Enable the <code class="hljs inline no-lang" v-pre>Allow executing file as program</code> option.</li>
+              <li>Note: the GUI menus may differ slightly on different Linux distributions.</li>
+              <li>From the command line: Use <code class="hljs inline no-lang" v-pre>chmod +x CATcher-x.y.z.AppImage</code></li>
+            </ul>
+          </tab>
+        </tabs>
+        <br>
+        <h2 id="reporting-problems"><span id="reporting-problems" class="anchor"></span>Reporting problems<a class="fa fa-anchor" href="#reporting-problems" onclick="event.stopPropagation()"></a></h2>
+        <p>If you face any issue in using CATcher, you can create a new issue in <a href="https://github.com/CATcher-org/CATcher/issues">CATcher issue tracker</a>.</p>
+        <p>If possible, also provide us with the log file saved by CATcher.</p>
+        <ul>
+          <li>For the web app, logs are saved in your browser and can be retrieved by clicking the &quot;<code class="hljs inline no-lang" v-pre>Download Log</code>&quot;button.</li>
+          <li>For the desktop app, logs can be retrieved from the following directory:
+            <ul>
+              <li>Linux: <code class="hljs inline no-lang" v-pre>~/.config/CATcher/logs/*.log</code></li>
+              <li>macOS: <code class="hljs inline no-lang" v-pre>~/Library/Logs/CATcher/*.log</code></li>
+              <li>Windows: <code class="hljs inline no-lang" v-pre>%USERPROFILE%\AppData\Roaming\CATcher\logs\\*.log</code></li>
+            </ul>
+          </li>
+        </ul>
         <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
       <nav id="page-nav" class="navbar navbar-light bg-transparent">
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
-          <a class="navbar-brand page-nav-title" href="#">Chapters of This Page</a>
+
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#welcome-to-the-catcher-user-guide">Welcome to the CATcher user guide&#x200E;</a>
+            <a class="nav-link py-1" href="#catcher-user-guide-for-students">CATcher User Guide (for students)&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#getting-started">Getting started&#x200E;</a>
+              <a class="nav-link py-1" href="#using-the-web-app">Using the Web app&#x200E;</a>
+              <a class="nav-link py-1" href="#using-the-desktop-app">Using the desktop app&#x200E;</a>
+              <a class="nav-link py-1" href="#reporting-problems">Reporting problems&#x200E;</a>
+            </nav>
 
           </nav>
         </div>

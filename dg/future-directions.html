@@ -7,13 +7,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.18.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  <title>CATcher - DG: Future directions</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
   <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/codeblock-dark.min.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
   <link rel="stylesheet" href="../markbind/css/markbind.min.css">
   <script src="../markbind/js/polyfill.min.js"></script>
   <script src="../markbind/js/vue.min.js"></script>
@@ -27,10 +27,11 @@
   <div id="app">
     <header>
       <navbar type="dark" class="temp-navbar">
-        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/assets/catcher_logo.png" width="40"></a>
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/images/catcher_logo.png" width="40"></a>
         <a href="/index.html" class="nav-link"> HOME </a>
         <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
         <a href="/dg/index.html" class="nav-link"> DEVELOPER GUIDE </a>
+        <a href="/about-us.html" class="nav-link"> ABOUT US </a>
         <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
         <li slot="right">
           <form class="navbar-form">
@@ -44,22 +45,31 @@
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <ul class="site-nav-list site-nav-list-root">
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/index.html">Introduction</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/index.html">DG Home</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tools-frameworks.html">Tools and Frameworks in CATcher</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/user-workflow.html">User workflow</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tests.html">Tests in CATcher</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tools.html">Tools</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/workflow.html">Workflow of CATcher</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/setting-up.html">Setting up</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/getting-started.html">Getting Started</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/design.html">Design</a></div>
             </li>
             <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/future-developments.html" class="current">Future Developments</a></div>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/dev-workflow.html">Dev workflow</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/testing.html">Testing</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/project-management.html">Project management</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/future-directions.html" class="current">Future directions</a></div>
             </li>
           </ul>
         </div>
@@ -67,31 +77,19 @@
 
 
       <div id="content-wrapper">
-        <h1 id="future-developments"><span id="future-developments" class="anchor"></span>Future Developments<a class="fa fa-anchor" href="#future-developments" onclick="event.stopPropagation()"></a></h1>
+        <h1 id="future-directions"><span id="future-directions" class="anchor"></span>Future directions<a class="fa fa-anchor" href="#future-directions" onclick="event.stopPropagation()"></a></h1>
         <p>Here are a few suggestions that future developers can work on to improve this application!</p>
-        <ol>
-          <li><a href="#support-commenting">Support Commenting</a></li>
-        </ol>
-        <h2 id="support-commenting"><span id="support-commenting" class="anchor"></span>Support Commenting<a class="fa fa-anchor" href="#support-commenting" onclick="event.stopPropagation()"></a></h2>
-        <p>Currently, the application only support 1 response for each phase. So a commenting section would be good to allow discussions between team members as well as between tutors and admins.</p>
-        <div class="clearfix">
-          <p>
-            <span class="float-left">
-              <a class="btn btn-light" href="/dg/workflow.html">
-                <span aria-hidden="true" class="far fa-arrow-alt-circle-left"></span>
-                <span> Workflow of CATcher </span></a></span>
-          </p>
-        </div>
-        <br>
-        <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
+        <h2 id="support-the-moderation-phase"><span id="support-the-moderation-phase" class="anchor"></span>Support the moderation phase<a class="fa fa-anchor" href="#support-the-moderation-phase" onclick="event.stopPropagation()"></a></h2>
+        <p>Currently, the moderation phase is done outside of CATcher.</p>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
       </div>
       <nav id="page-nav" class="navbar navbar-light bg-transparent">
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
-          <a class="navbar-brand page-nav-title" href="#">Chapters of This Page</a>
+
           <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#future-developments">Future Developments&#x200E;</a>
+            <a class="nav-link py-1" href="#future-directions">Future directions&#x200E;</a>
             <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#support-commenting">Support Commenting&#x200E;</a>
+              <a class="nav-link py-1" href="#support-the-moderation-phase">Support the moderation phase&#x200E;</a>
             </nav>
 
           </nav>

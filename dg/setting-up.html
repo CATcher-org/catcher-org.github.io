@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.18.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CATcher - DG: Setting up</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header>
+      <navbar type="dark" class="temp-navbar">
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/images/catcher_logo.png" width="40"></a>
+        <a href="/index.html" class="nav-link"> HOME </a>
+        <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
+        <a href="/dg/index.html" class="nav-link"> DEVELOPER GUIDE </a>
+        <a href="/about-us.html" class="nav-link"> ABOUT US </a>
+        <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
+        <li slot="right">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/index.html">DG Home</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/user-workflow.html">User workflow</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tools.html">Tools</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/setting-up.html" class="current">Setting up</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/design.html">Design</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/dev-workflow.html">Dev workflow</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/testing.html">Testing</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/project-management.html">Project management</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/future-directions.html">Future directions</a></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div id="content-wrapper">
+        <h1 id="setting-up"><span id="setting-up" class="anchor"></span>Setting up<a class="fa fa-anchor" href="#setting-up" onclick="event.stopPropagation()"></a></h1>
+        <p>This section guides you through the steps required to set up your computer for developing CATcher.</p>
+        <h2 id="getting-started"><span id="getting-started" class="anchor"></span>Getting started<a class="fa fa-anchor" href="#getting-started" onclick="event.stopPropagation()"></a></h2>
+        <p><strong>Prerequisites:</strong></p>
+        <ul>
+          <li><a href="https://nodejs.org/en/blog/release/v12.20.0/">Node.js 12</a> -- (run <code class="hljs inline no-lang" v-pre>node -v</code> in your OS terminal to check the version of Node on your computer)</li>
+        </ul>
+        <p><strong>Recommended:</strong></p>
+        <ul>
+          <li>IDE: Visual Studio Code</li>
+        </ul>
+        <p><strong>Steps:</strong></p>
+        <ol>
+          <li>Fork this repository into your Github account.</li>
+          <li>Clone the forked repository into your computer.</li>
+          <li>Install dependencies with npm: Run <code class="hljs inline no-lang" v-pre>npm install</code>.</li>
+          <li>Compile and start the application: Run <code class="hljs inline no-lang" v-pre>npm start</code>.</li>
+        </ol>
+        <hr>
+        <h2 id="dev-commands"><span id="dev-commands" class="anchor"></span>Dev commands<a class="fa fa-anchor" href="#dev-commands" onclick="event.stopPropagation()"></a></h2>
+        <p>Given below are different commands you can run to build the application in different operating systems.</p>
+        <div class="table-responsive">
+          <table class="markbind-table table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Command</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm start</code></td>
+                <td>Start the app from Electron in development mode.</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run ng:serve:web</code></td>
+                <td>Start the app from the browser in development mode.</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run build</code></td>
+                <td>Build the app. Your built files are in the /dist folder.</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run build:prod</code></td>
+                <td>Build the app with Angular aot. Your built files are in the /dist folder.</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run electron:local</code></td>
+                <td>Builds your application and start electron</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run electron:linux</code></td>
+                <td>Builds your application and creates an app consumable on linux system</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run electron:windows</code></td>
+                <td>On a Windows OS, builds your application and creates an app consumable in windows 32/64 bit systems</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run electron:mac</code></td>
+                <td>On a MAC OS, builds your application and generates a <code class="hljs inline no-lang" v-pre>.app</code> file of your application that can be run on Mac</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run deploy:web</code></td>
+                <td>Will deploy the app onto the Github's <code class="hljs inline no-lang" v-pre>gh-pages</code> branch. <br> Prerequisites:<br> 1. Add Environment variable of <code class="hljs inline no-lang" v-pre>GH_TOKEN=&lt;Github Personal Access Token&gt;</code> with the permission of <code class="hljs inline no-lang" v-pre>repo</code>. <br>2. <code class="hljs inline no-lang" v-pre>build:prod:web</code> command's <code class="hljs inline no-lang" v-pre>--base-href</code> argument in <code class="hljs inline no-lang" v-pre>package.json</code> must have the following format <code class="hljs inline no-lang" v-pre>https://&lt;OrgName or Username&gt;.github.io/CATcher/</code>. <br> 3. If you are deploying outside of CATcher-org then it would be necessary to create a new OAuth application and change the <code class="hljs inline no-lang" v-pre>clientId</code> in <code class="hljs inline no-lang" v-pre>environment.prod.ts</code> <br> 4. If you are deploying outside of CATcher-org, you would also need to deploy your own instance of proxy server using <a href="https://github.com/CATcher-org/gatekeeper">gatekeeper</a> and change the appropriate variables in <code class="hljs inline no-lang" v-pre>environment.prod.ts</code>.</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run lint</code></td>
+                <td>Runs the linter (TSLint)</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run test</code></td>
+                <td>Runs the tests</td>
+              </tr>
+              <tr>
+                <td><code class="hljs inline no-lang" v-pre>npm run test -- &quot;--code-coverage&quot;</code></td>
+                <td>Runs the tests and generates code coverage report under <code class="hljs inline no-lang" v-pre>tests/coverage</code> folder</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>We have a GitHub Actions' workflow that can perform some of the tasks above with a single-click.</p>
+        <hr>
+        <h2 id="debugging"><span id="debugging" class="anchor"></span>Debugging<a class="fa fa-anchor" href="#debugging" onclick="event.stopPropagation()"></a></h2>
+        <p>If you are using Visual Studio Code to debug CATcher with Chrome, Firefox or Edge.
+          Refer to the <code class="hljs inline no-lang" v-pre>Debugging Angular</code> section of <a href="https://code.visualstudio.com/docs/nodejs/angular-tutorial#_debugging-angular">this guide</a> for a step-by-step walkthrough of the debugger setup.</p>
+        <p>In summary, the following steps are needed:</p>
+        <ol>
+          <li>Install the <code class="hljs inline no-lang" v-pre>Debugger for Chrome</code> extension for VS Code. You can also install debugger extensions for Firefox and Edge.</li>
+          <li>Create VS Code's debugger config file (<code class="hljs inline no-lang" v-pre>launch.json</code> ) as shown in <a href="https://code.visualstudio.com/docs/nodejs/angular-tutorial#_debugging-angular">the guide</a>. Particularly, set the <code class="hljs inline no-lang" v-pre>url</code> attribute to <code class="hljs inline no-lang" v-pre>http://localhost:4200</code> (reason: CATcher app is served locally on port 4200, by default.)</li>
+          <li>In the root project folder, run <code class="hljs inline no-lang" v-pre>npm run ng:serve:web</code>.</li>
+          <li>In VS Code's Debug View, launch the debugger by clicking the green arrow (or F5). You should see the CATcher app loading within a new browser window.</li>
+        </ol>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
+      </div>
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#setting-up">Setting up&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#getting-started">Getting started&#x200E;</a>
+              <a class="nav-link py-1" href="#dev-commands">Dev commands&#x200E;</a>
+              <a class="nav-link py-1" href="#debugging">Debugging&#x200E;</a>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.18.1</a>]</small>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = ''
+  MarkBind.setupWithSearch()
+</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
+
+</html>

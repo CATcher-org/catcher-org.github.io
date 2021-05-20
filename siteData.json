@@ -2,48 +2,81 @@
   "enableSearch": true,
   "pages": [
     {
-      "src": "dg/future-developments.md",
-      "title": "",
+      "src": "about-us.md",
+      "title": "About us",
       "headings": {
-        "future-developments": "Future Developments",
-        "support-commenting": "Support Commenting"
+        "about-us": "About us",
+        "current-team-members": "Current team members",
+        "past-team-members": "Past team members"
       },
       "headingKeywords": {}
     },
     {
-      "src": "dg/getting-started.md",
-      "title": "",
+      "src": "dg/design.md",
+      "title": "DG: Design",
       "headings": {
-        "getting-started": "Getting Started",
-        "setting-up": "Setting Up",
-        "prerequisites": "Prerequisites",
-        "steps-for-setting-up": "Steps for Setting Up",
-        "debugging-with-visual-studio-code": "Debugging with Visual Studio Code",
-        "commands": "Commands",
-        "good-first-issues": "Good First Issues",
-        "releasing-a-new-version-of-catcher": "Releasing a New Version of CATcher"
+        "design": "Design"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/dev-workflow.md",
+      "title": "DG: Dev workflow",
+      "headings": {
+        "dev-workflow": "Dev workflow",
+        "choosing-an-issue": "Choosing an issue",
+        "submitting-prs": "Submitting PRs"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/future-directions.md",
+      "title": "DG: Future directions",
+      "headings": {
+        "future-directions": "Future directions",
+        "support-the-moderation-phase": "Support the moderation phase"
       },
       "headingKeywords": {}
     },
     {
       "src": "dg/index.md",
-      "title": "Onboarding Guide",
+      "title": "",
       "headings": {
-        "welcome-to-the-catcher-developer-guide": "Welcome to the CATcher Developer Guide"
+        "catcher-developer-guide": "CATcher Developer Guide"
       },
       "headingKeywords": {}
     },
     {
-      "src": "dg/tests.md",
-      "title": "",
+      "src": "dg/project-management.md",
+      "title": "DG: Project management",
       "headings": {
-        "introduction-to-tests-in-catcher": "Introduction to Tests in CATcher",
-        "jasmine-style-guide": "Jasmine Style Guide",
-        "resources-for-jasmine": "Resources for Jasmine",
-        "angular-testbed-utility": "Angular TestBed Utility",
-        "resources-for-angular-testbed": "Resources for Angular TestBed",
-        "e2e-testing": "E2E Testing",
-        "running-e2e-tests": "Running E2E Tests",
+        "project-management": "Project management",
+        "creating-a-release": "Creating a release",
+        "releasing-a-new-version": "Releasing a new version"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/setting-up.md",
+      "title": "DG: Setting up",
+      "headings": {
+        "setting-up": "Setting up",
+        "getting-started": "Getting started",
+        "dev-commands": "Dev commands",
+        "debugging": "Debugging"
+      },
+      "headingKeywords": {}
+    },
+    {
+      "src": "dg/testing.md",
+      "title": "DG: Testing",
+      "headings": {
+        "testing": "Testing",
+        "loading-custom-sessions": "Loading custom sessions",
+        "testing-with-jasmine": "Testing with Jasmine",
+        "angular-testbed-utility": "Angular testBed utility",
+        "e2e-testing": "E2E testing",
+        "running-e2e-tests": "Running E2E tests",
         "troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver": "Troubleshooting conflicts between the versions of the browser and browser driver",
         "protractor-configuration": "Protractor Configuration",
         "how-the-e2e-tests-work": "How the E2E tests work"
@@ -51,51 +84,69 @@
       "headingKeywords": {}
     },
     {
-      "src": "dg/tools-frameworks.md",
-      "title": "",
+      "src": "dg/tools.md",
+      "title": "DG: Tool stack",
       "headings": {
-        "introduction-to-tools-and-frameworks-used-in-catcher": "Introduction to Tools and Frameworks used in CATcher",
-        "introduction-to-angular": "Introduction to Angular",
-        "angular-structure": "Angular Structure",
-        "rxjs-library": "RxJS Library",
-        "resources-for-angular": "Resources for Angular",
-        "introduction-to-electron": "Introduction to Electron",
-        "how-electron-works": "How Electron Works",
-        "resources-for-electron": "Resources for Electron",
-        "introduction-to-graphql": "Introduction to GraphQL",
-        "authentication-in-catcher": "Authentication in CATcher"
+        "tools": "Tools",
+        "type-script": "Type Script",
+        "angular": "Angular",
+        "electron": "Electron",
+        "graphql": "GraphQL",
+        "oauth-2-0": "OAuth 2.0",
+        "testing-tools": "Testing tools"
       },
       "headingKeywords": {}
     },
     {
-      "src": "dg/workflow.md",
-      "title": "",
+      "src": "dg/user-workflow.md",
+      "title": "DG: User workflow",
       "headings": {
-        "workflow-of-catcher": "Workflow of CATcher",
-        "submitting-prs": "Submitting PRs"
+        "user-workflow": "User workflow",
+        "overview": "Overview",
+        "the-settings-repo": "The settings repo",
+        "bug-reporting-phase": "Bug Reporting Phase",
+        "catcher-collect-bug-reports": "[CATcher] Collect Bug Reports",
+        "script-s1a-tester-repo-interim-repo": "[Script S1a] Tester-Repo → Interim-Repo",
+        "script-s1b-interim-repo-dev-repo": "[Script S1b] Interim-Repo → Dev-Repo",
+        "script-s1c-in-the-dry-run-tester-repo-team-repo": "[Script S1c] In the dry run: Tester-Repo → Team-Repo",
+        "dev-response-phase": "Dev Response Phase",
+        "catcher-collect-dev-response": "[CATcher] Collect Dev Response",
+        "script-s2-dev-repo-tester-repo": "[Script S2] Dev-Repo → Tester-Repo",
+        "tester-response-phase": "Tester Response Phase",
+        "catcher-collect-tester-response": "[CATcher] Collect Tester Response",
+        "script-s3-tester-repo-tutor-repo": "[Script S3] Tester-Repo → Tutor-Repo",
+        "moderation-phase": "Moderation Phase",
+        "catcher-collect-tutor-response": "[CATcher] Collect Tutor Response"
       },
       "headingKeywords": {}
     },
     {
       "src": "index.md",
-      "title": "Landing Page",
+      "title": "",
       "headings": {},
       "headingKeywords": {}
     },
     {
       "src": "ug/index.md",
-      "title": "User Guide",
+      "title": "UG: for students",
       "headings": {
-        "welcome-to-the-catcher-user-guide": "Welcome to the CATcher user guide"
+        "catcher-user-guide-for-students": "CATcher User Guide (for students)",
+        "getting-started": "Getting started",
+        "using-the-web-app": "Using the Web app",
+        "safari-users": "Safari users",
+        "using-the-desktop-app": "Using the desktop app",
+        "troubleshooting": "Troubleshooting",
+        "reporting-problems": "Reporting problems"
       },
       "headingKeywords": {}
     },
     {
-      "src": "ug/setting-up.md",
-      "title": "Setting Up",
+      "src": "ug/instructors.md",
+      "title": "UG: for instructors",
       "headings": {
-        "get-started": "Get started",
-        "notes-on-using-the-web-app": "Notes on Using the Web App"
+        "catcher-user-guide-for-instructors": "CATcher User Guide (for instructors)",
+        "configuring-the-org": "Configuring the org",
+        "setting-up-repos": "Setting up repos"
       },
       "headingKeywords": {}
     }

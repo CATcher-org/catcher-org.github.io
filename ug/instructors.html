@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="MarkBind 2.18.1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CATcher - UG: for instructors</title>
+  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+  <link rel="stylesheet" href="../markbind/css/octicons.css">
+  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
+  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
+  <script src="../markbind/js/polyfill.min.js"></script>
+  <script src="../markbind/js/vue.min.js"></script>
+  <script src="../markbind/js/markbind.min.js"></script>
+  <script src="../markbind/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
+</head>
+
+<body data-spy="scroll" data-target="#page-nav" data-offset="100">
+  <div id="app">
+    <header>
+      <navbar type="dark" class="temp-navbar">
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/images/catcher_logo.png" width="40"></a>
+        <a href="/index.html" class="nav-link"> HOME </a>
+        <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
+        <a href="/dg/index.html" class="nav-link"> DEVELOPER GUIDE </a>
+        <a href="/about-us.html" class="nav-link"> ABOUT US </a>
+        <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
+        <li slot="right">
+          <form class="navbar-form">
+            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
+          </form>
+        </li>
+      </navbar>
+    </header>
+    <div id="flex-body">
+      <nav id="site-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-right-grey nav-inner position-sticky slim-scroll">
+          <ul class="site-nav-list site-nav-list-root">
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/index.html">For students</a></div>
+            </li>
+            <li>
+              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/ug/instructors.html" class="current">For instructors</a></div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+
+      <div id="content-wrapper">
+        <h1 id="catcher-user-guide-for-instructors"><span id="catcher-user-guide-for-instructors" class="anchor"></span>CATcher User Guide (for instructors)<a class="fa fa-anchor" href="#catcher-user-guide-for-instructors" onclick="event.stopPropagation()"></a></h1>
+        <p>This document is only relevant for instructors who has plays the admin role of a PE.</p>
+        <hr>
+        <h2 id="configuring-the-org"><span id="configuring-the-org" class="anchor"></span>Configuring the org<a class="fa fa-anchor" href="#configuring-the-org" onclick="event.stopPropagation()"></a></h2>
+        <p>The host Github organization must have the following settings:</p>
+        <ol>
+          <li>Ensure <code class="hljs inline no-lang" v-pre>Base Permissions</code> is set to <code class="hljs inline no-lang" v-pre>None</code>.
+            <ol>
+              <li>Under <code class="hljs inline no-lang" v-pre>Settings</code> page of your organization, click on <code class="hljs inline no-lang" v-pre>Member privileges</code> navigation tab.</li>
+              <li>Under <code class="hljs inline no-lang" v-pre>Base permissions</code>, select <code class="hljs inline no-lang" v-pre>None</code>.</li>
+            </ol>
+          </li>
+          <li>Create a <code class="hljs inline no-lang" v-pre>students</code> team.</li>
+          <li>Create a <code class="hljs inline no-lang" v-pre>tutors</code> team.</li>
+          <li>Invite github users into their respective teams.</li>
+          <li>Start CATcher app and log in by clicking on the OAuth button. Authorize OAuth app access to your account.</li>
+          <li><strong>Request access</strong> to your organization as shown in this <a href="https://help.github.com/en/github/setting-up-and-managing-your-github-user-account/requesting-organization-approval-for-oauth-apps">tutorial</a>.</li>
+          <li><strong>Grant</strong> CATcher OAuth App access into the organization as shown in this <a href="https://help.github.com/en/github/setting-up-and-managing-organizations-and-teams/approving-oauth-apps-for-your-organization">tutorial</a>.</li>
+        </ol>
+        <hr>
+        <h2 id="setting-up-repos"><span id="setting-up-repos" class="anchor"></span>Setting up repos<a class="fa fa-anchor" href="#setting-up-repos" onclick="event.stopPropagation()"></a></h2>
+        <p>For each phase, users with write access will be able to upload files (e.g. screenshots, .txt files, etc...) onto the repository's <code class="hljs inline no-lang" v-pre>/file</code> folder. These files are used in conjunction with issue description and comments in a form of a link. As for images, the actual image will be displayed.</p>
+        <h4 id="settings-repo"><span id="settings-repo" class="anchor"></span>Settings repo:<a class="fa fa-anchor" href="#settings-repo" onclick="event.stopPropagation()"></a></h4>
+        <ul>
+          <li>Suggested name: <code class="hljs inline no-lang" v-pre>module-org/pe</code></li>
+          <li>The name of this repository must be stated in the application during login. This repository must contain a <strong><code class="hljs inline no-lang" v-pre>data.csv</code></strong> and a <strong><code class="hljs inline no-lang" v-pre>settings.json</code></strong> file.</li>
+          <li><strong><code class="hljs inline no-lang" v-pre>data.csv</code></strong>
+            <ul>
+              <li>Must contain the following information:
+                <ol>
+                  <li>Roles of users. (Student, Tutor, Admin)</li>
+                  <li>Student's team allocation.</li>
+                  <li>Tutor's team allocation.</li>
+                </ol>
+              </li>
+              <li>Example <a href="https://github.com/CATcher-org/public_data/blob/master/data.csv">https://github.com/CATcher-org/public_data/blob/master/data.csv</a></li>
+            </ul>
+          </li>
+          <li><strong><code class="hljs inline no-lang" v-pre>settings.json</code></strong>:
+            <ul>
+              <li>Must contain the following information:
+                <ol>
+                  <li>The list of open phases represented by <code class="hljs inline no-lang" v-pre>&quot;openPhases&quot;: []</code>.</li>
+                  <li>The name of the repository that each phase is to utilize.</li>
+                </ol>
+              </li>
+              <li>Example <a href="https://github.com/CATcher-org/public_data/blob/master/settings.json">https://github.com/CATcher-org/public_data/blob/master/settings.json</a></li>
+            </ul>
+          </li>
+        </ul>
+        <h4 id="repositories-for-collecting-initial-bug-reports"><span id="repositories-for-collecting-initial-bug-reports" class="anchor"></span>Repositories for collecting initial bug reports<a class="fa fa-anchor" href="#repositories-for-collecting-initial-bug-reports" onclick="event.stopPropagation()"></a></h4>
+        <p>The repositories used for initial bug reporting will be created automatically by CATcher, in the tester's own GitHub account e.g., <code class="hljs inline no-lang" v-pre>user/pe</code>. The same repo will be used during the tester-response phase.</p>
+        <h4 id="repositories-for-holding-processed-bug-reports"><span id="repositories-for-holding-processed-bug-reports" class="anchor"></span>Repositories for holding processed bug reports<a class="fa fa-anchor" href="#repositories-for-holding-processed-bug-reports" onclick="event.stopPropagation()"></a></h4>
+        <ul>
+          <li>A private repo to host collected bug reports e.g., <code class="hljs inline no-lang" v-pre>module-org/pe-interim</code>.</li>
+          <li>A repo to host anonymized bug reports for dev teams to respond to e.g., <code class="hljs inline no-lang" v-pre>module-org/pe-dev-response</code><br>
+            This must be a public repo with write access given to students.</li>
+          <li>A repo to hold bugs for tutors to moderate e.g., <code class="hljs inline no-lang" v-pre>module-org/pe-moderation</code><br>
+            This can be a private repo with write access given to tutors.</li>
+        </ul>
+        <p><i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i></p>
+      </div>
+      <nav id="page-nav" class="navbar navbar-light bg-transparent">
+        <div class="border-left-grey nav-inner position-sticky slim-scroll">
+
+          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
+            <a class="nav-link py-1" href="#catcher-user-guide-for-instructors">CATcher User Guide (for instructors)&#x200E;</a>
+            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
+              <a class="nav-link py-1" href="#configuring-the-org">Configuring the org&#x200E;</a>
+              <a class="nav-link py-1" href="#setting-up-repos">Setting up repos&#x200E;</a>
+            </nav>
+
+          </nav>
+        </div>
+      </nav>
+    </div>
+    <footer>
+
+      <div class="text-center">
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.18.1</a>]</small>
+      </div>
+    </footer>
+  </div>
+</body>
+<script src="../markbind/js/bootstrap-utility.min.js"></script>
+<script>
+  const baseUrl = ''
+  MarkBind.setupWithSearch()
+</script>
+<script src="../markbind/layouts/default/scripts.js"></script>
+<script>
+  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
+</script>
+
+</html>
