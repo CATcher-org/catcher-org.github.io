@@ -63,7 +63,8 @@
         "setting-up": "Setting up",
         "getting-started": "Getting started",
         "dev-commands": "Dev commands",
-        "debugging": "Debugging"
+        "debugging": "Debugging",
+        "writing-documentation": "Writing Documentation"
       },
       "headingKeywords": {}
     },
