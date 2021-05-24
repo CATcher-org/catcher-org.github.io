@@ -24,7 +24,7 @@ This section guides you through the steps required to set up your computer for d
 1. Install dependencies with npm: Run `npm install`.
 1. Compile and start the application: Run `npm start`.
 
----
+-----------------------------------------------------------------------------------
 
 ## Dev commands
 
@@ -47,7 +47,7 @@ Given below are different commands you can run to build the application in diffe
 
 We have a GitHub Actions' workflow that can perform some of the tasks above with a single-click.
 
----
+-----------------------------------------------------------------------------------
 
 ## Debugging
 
@@ -61,3 +61,11 @@ In summary, the following steps are needed:
 1. In the root project folder, run `npm run ng:serve:web`.
 1. In VS Code's Debug View, launch the debugger by clicking the green arrow (or F5). You should see the CATcher app loading within a new browser window.
 
+-----------------------------------------------------------------------------------
+
+## Writing Documentation
+
+**CATcher documentation is hosted in a separate repo** [CATcher-org/catcher-org.github.io](https://github.com/CATcher-org/catcher-org.github.io).
+When you need to update documentation, you'll need to fork and clone that repo to your computer as well.
+
+**We use [MarkBind](https://markbind.org/) for documentation**. Follow [this tutorial](https://se-education.org/guides/tutorials/markbind.html) to learn how to use MarkBind for updating project documentation.
