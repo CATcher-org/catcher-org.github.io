@@ -27,6 +27,16 @@ from smaller components / app state).
 
 ## Services
 
+Services are classes that define business logic or communicate with the app's backend (GitHub). For ease of understanding, we have distinct services for the different types of data exchanged with the backend. Below are some examples:
+
+- IssueService: Responsible for creating / updating issues, and periodically fetching issues from GitHub
+- AuthService: Responsible for starting the authentication process, and querying / updating application state related to authentication
+- LabelService - Responsible for ensuring the GitHub repo has the required labels, and providing label data to various components
+
+Under the hood, several services use the `GitHubService` to communicate with GitHub.
+The `GitHubService` abstracts the details of communication with GitHub, away from the other services.
+
+
 
 
 
