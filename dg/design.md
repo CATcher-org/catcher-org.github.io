@@ -13,22 +13,26 @@ both versions.
 
 This page describes CATcher's design. As an Angular application, the different
 views of the CATcher app are built out of **components**, and the content displayed on these
-views is constructed from data provided by **services**. We describe the design of the views and services in the following sections.
+views is constructed using data provided by **services**. We describe the design of the views and services in the following sections.
 
 ## Views
 
 There are only a few views accessible by the user, in each phase of the practical exam.
 
-The diagrams below gives an example on how a user can navigate between the different views in various phases.
+The diagram below shows how a user can navigate between the different views in the bug reporting phase.
 
 ![](../images/views-traversal.png)
 
-The diagrams also show which components are used to construct each view.
+Each view is built out of components.
+As an example, the following diagram shows that the `ViewIssueComponent` is used to display / update
+details about a bug report (i.e. the title, tester's original report, team's response, etc).
+
+The diagram also shows how `ViewIssueComponent` itself is built using several, smaller components. 
+For instance, the `TitleComponent`, a child component of `ViewIssueComponent`, is responsible for
+displaying / updating the bug report's title.
 
 ![](../images/large-component.png)
 
-(Briefly explain how larger components like IssueTablesComponent / ViewIssueComponent are constructed
-from smaller components / app state).
 
 ## Services
 
