@@ -24,10 +24,7 @@ The diagram below shows how a user can navigate between the different views in t
 ![](../images/views-traversal.png)
 
 Each view is built out of components.
-As an example, the following diagram shows that the `ViewIssueComponent` is used to display / update
-details about a bug report (i.e. the title, tester's original report, team's response, etc).
-
-The diagram also shows how `ViewIssueComponent` itself is built using several, smaller components. 
+As an example, the following diagram deconstructs the `ViewIssueComponent`, which is used to display / update details about a bug report (i.e. the title, tester's original report, team's response, etc), to show how it is built using several smaller components.
 For instance, the `TitleComponent`, a child component of `ViewIssueComponent`, is responsible for
 displaying / updating the bug report's title.
 
