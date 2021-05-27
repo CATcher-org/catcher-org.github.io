@@ -18,9 +18,14 @@ views is constructed from data provided by **services**. We describe the design 
 ## Views
 
 There are only a few views accessible by the user, in each phase of the practical exam.
-The diagrams below show how a user can navigate between the different views in various phases.
+
+The diagrams below gives an example on how a user can navigate between the different views in various phases.
+
+![](../images/views-traversal.png)
+
 The diagrams also show which components are used to construct each view.
 
+![](../images/large-component.png)
 
 (Briefly explain how larger components like IssueTablesComponent / ViewIssueComponent are constructed
 from smaller components / app state).
