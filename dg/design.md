@@ -13,7 +13,7 @@ both versions.
 
 This page describes CATcher's design. As an Angular application, the different
 views of the CATcher app are built out of **components**, and the content displayed on these
-views is constructed using data provided by **services**. We describe the design of the views and services in the following sections.
+views is constructed using data provided by **services**. In the following sections we will briefly describe the design of some views and services within CATcher.
 
 ## Views
 
