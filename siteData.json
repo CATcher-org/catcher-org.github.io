@@ -15,7 +15,9 @@
       "src": "dg/design.md",
       "title": "DG: Design",
       "headings": {
-        "design": "Design"
+        "design": "Design",
+        "views": "Views",
+        "services": "Services"
       },
       "headingKeywords": {}
     },
