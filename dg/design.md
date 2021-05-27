@@ -44,8 +44,3 @@ Services are classes that define business logic or communicate with the app's ba
 
 Under the hood, several services use the `GitHubService` to communicate with GitHub.
 The `GitHubService` abstracts the details of communication with GitHub, away from the other services.
-
-
-
-
-
