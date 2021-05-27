@@ -6,7 +6,7 @@
 
 # CATcher Developer Guide
 
-Welcome to the CATcher Develoepr Guide! Given below is an overview of various sections of CATcher dev docs.
+Welcome to the CATcher Developer Guide! Given below is an overview of various sections of CATcher dev docs.
 
 <box type="tip" seamless>
 
