@@ -1,7 +1,7 @@
 # CATcher Product Page
 
 # Setting up 
-This section guides you through the steps required to set up your computer for developing CATcher's Product Page.
+This section guides you through the steps required to set up your computer for developing CATcher's product site.
 
 ## Prerequisites
 You need Node 12 to develop this project. 
