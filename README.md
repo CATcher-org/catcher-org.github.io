@@ -1,4 +1,4 @@
-# CATcher Product Page
+# CATcher Product Site
 
 # Setting up 
 This section guides you through the steps required to set up your computer for developing CATcher's product site.
