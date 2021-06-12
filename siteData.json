@@ -2,6 +2,17 @@
   "enableSearch": true,
   "pages": [
     {
+      "src": "README.md",
+      "title": "",
+      "headings": {
+        "catcher-product-site": "CATcher Product Site",
+        "setting-up": "Setting up",
+        "prerequisites": "Prerequisites",
+        "getting-started": "Getting Started"
+      },
+      "headingKeywords": {}
+    },
+    {
       "src": "about-us.md",
       "title": "About us",
       "headings": {
@@ -28,128 +39,6 @@
         "dev-workflow": "Dev workflow",
         "choosing-an-issue": "Choosing an issue",
         "submitting-prs": "Submitting PRs"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/future-directions.md",
-      "title": "DG: Future directions",
-      "headings": {
-        "future-directions": "Future directions",
-        "support-the-moderation-phase": "Support the moderation phase"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/index.md",
-      "title": "",
-      "headings": {
-        "catcher-developer-guide": "CATcher Developer Guide"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/project-management.md",
-      "title": "DG: Project management",
-      "headings": {
-        "project-management": "Project management",
-        "creating-a-release": "Creating a release",
-        "releasing-a-new-version": "Releasing a new version"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/setting-up.md",
-      "title": "DG: Setting up",
-      "headings": {
-        "setting-up": "Setting up",
-        "getting-started": "Getting started",
-        "dev-commands": "Dev commands",
-        "debugging": "Debugging",
-        "writing-documentation": "Writing Documentation"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/testing.md",
-      "title": "DG: Testing",
-      "headings": {
-        "testing": "Testing",
-        "loading-custom-sessions": "Loading custom sessions",
-        "testing-with-jasmine": "Testing with Jasmine",
-        "angular-testbed-utility": "Angular testBed utility",
-        "e2e-testing": "E2E testing",
-        "running-e2e-tests": "Running E2E tests",
-        "troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver": "Troubleshooting conflicts between the versions of the browser and browser driver",
-        "protractor-configuration": "Protractor Configuration",
-        "how-the-e2e-tests-work": "How the E2E tests work"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/tools.md",
-      "title": "DG: Tool stack",
-      "headings": {
-        "tools": "Tools",
-        "type-script": "Type Script",
-        "angular": "Angular",
-        "electron": "Electron",
-        "graphql": "GraphQL",
-        "oauth-2-0": "OAuth 2.0",
-        "testing-tools": "Testing tools"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "dg/user-workflow.md",
-      "title": "DG: User workflow",
-      "headings": {
-        "user-workflow": "User workflow",
-        "overview": "Overview",
-        "the-settings-repo": "The settings repo",
-        "bug-reporting-phase": "Bug Reporting Phase",
-        "catcher-collect-bug-reports": "[CATcher] Collect Bug Reports",
-        "script-s1a-tester-repo-interim-repo": "[Script S1a] Tester-Repo → Interim-Repo",
-        "script-s1b-interim-repo-dev-repo": "[Script S1b] Interim-Repo → Dev-Repo",
-        "script-s1c-in-the-dry-run-tester-repo-team-repo": "[Script S1c] In the dry run: Tester-Repo → Team-Repo",
-        "dev-response-phase": "Dev Response Phase",
-        "catcher-collect-dev-response": "[CATcher] Collect Dev Response",
-        "script-s2-dev-repo-tester-repo": "[Script S2] Dev-Repo → Tester-Repo",
-        "tester-response-phase": "Tester Response Phase",
-        "catcher-collect-tester-response": "[CATcher] Collect Tester Response",
-        "script-s3-tester-repo-tutor-repo": "[Script S3] Tester-Repo → Tutor-Repo",
-        "moderation-phase": "Moderation Phase",
-        "catcher-collect-tutor-response": "[CATcher] Collect Tutor Response"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "index.md",
-      "title": "",
-      "headings": {},
-      "headingKeywords": {}
-    },
-    {
-      "src": "ug/index.md",
-      "title": "UG: for students",
-      "headings": {
-        "catcher-user-guide-for-students": "CATcher User Guide (for students)",
-        "getting-started": "Getting started",
-        "using-the-web-app": "Using the Web app",
-        "safari-users": "Safari users",
-        "using-the-desktop-app": "Using the desktop app",
-        "troubleshooting": "Troubleshooting",
-        "reporting-problems": "Reporting problems"
-      },
-      "headingKeywords": {}
-    },
-    {
-      "src": "ug/instructors.md",
-      "title": "UG: for instructors",
-      "headings": {
-        "catcher-user-guide-for-instructors": "CATcher User Guide (for instructors)",
-        "configuring-the-org": "Configuring the org",
-        "setting-up-repos": "Setting up repos"
       },
       "headingKeywords": {}
     }
