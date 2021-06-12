@@ -17,4 +17,4 @@ If you do not have Node 12 installed in your computer, click on [this link](http
 3. Install Markbind with npm: Run `npm install -g markbind-cli`.
 
 4. Compile and start the application: Run `markbind serve`.
-    - **Note**: If this step fails, it may be possible that the port that `Markbind` is attempting to serve the site in is being used. This may be rectified wit the following command: `markbind serve -p <available_port>`.
+    - **Note**: If this step fails, it may be possible that the port that `Markbind` is attempting to serve the site in is being used. This may be rectified with the following command: `markbind serve -p <available_port>`.
