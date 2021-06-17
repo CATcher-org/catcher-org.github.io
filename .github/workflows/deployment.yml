@@ -21,7 +21,7 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
       run: |
-        sudo npm install -g markbind-cli
+        sudo npm install -g markbind-cli@2.18.1
         markbind build
 
     # Deploy to local repo, gh-pages branch.
