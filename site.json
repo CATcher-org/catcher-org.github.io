@@ -1,6 +1,9 @@
 {
   "baseUrl": "",
-  "titlePrefix": "",
+  "titlePrefix": "CATcher",
+  "style": {
+    "codeTheme": "light"
+  },
   "ignore": [
     "_markbind/layouts/*",
     "_markbind/logs/*",
@@ -13,14 +16,6 @@
     ".git/*"
   ],
   "pages": [
-    {
-      "src": "index.md",
-      "title": "Landing Page"
-    },
-    {
-      "src": "dg/onboarding-guide.md",
-      "title": "Onboarding Guide"
-    },
     {
       "glob": ["**/index.md", "**/*.+(md|mbd)"]
     }
