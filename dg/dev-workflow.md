@@ -38,4 +38,4 @@ Given below are some guidelines to follow when submitting PRs.
   [Commit message to be used when the PR is merged]
   ```
 
-* Please follow [these se-edu guidelines](https://se-education.org/guides/conventions/git.html) when proposing the commit message.
+* Please follow [these se-edu guidelines](https://se-education.org/guides/conventions/git.html) when crafting the commit message.
