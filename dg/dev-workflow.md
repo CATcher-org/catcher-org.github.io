@@ -25,7 +25,7 @@ Given below are some guidelines to follow when submitting PRs.
   2. A description of the changes made
   3. A proposed commit message to be used when the PR is merged
 
-  You can refer to the following sample pull request template for your PR.
+  You can refer to the following sample pull request template or existing pull request [#675](https://github.com/CATcher-org/CATcher/pull/675), [#668](https://github.com/CATcher-org/CATcher/pull/668) for your PRs.
 
   ```
   Summary:
