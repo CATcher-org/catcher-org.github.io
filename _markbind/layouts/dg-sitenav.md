@@ -1,4 +1,4 @@
-<navigation>
+<site-nav>
 * [DG Home]({{ baseUrl }}/dg/index.html)
 * [User workflow]({{ baseUrl }}/dg/user-workflow.html)
 * [Tools]({{ baseUrl }}/dg/tools.html)
@@ -8,4 +8,4 @@
 * [Testing]({{ baseUrl }}/dg/testing.html)
 * [Project management]({{ baseUrl }}/dg/project-management.html)
 * [Future directions]({{ baseUrl }}/dg/future-directions.html)
-</navigation>
+</site-nav>

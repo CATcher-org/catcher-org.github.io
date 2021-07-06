@@ -98,7 +98,7 @@ CATcher uses the OAuth 2.0 protocol to authenticate users. Below is a summary of
 
 3. Authentication is complete, and CATcher can now use the access token when it uses the GitHub API for its logic (e.g. submitting new issues, editing existing issues)
 
-The authentication process is kicked off in the `AuthComponent`, but the code that co-ordinates steps 1 and 2 can be found in [`oauth.ts`](../oauth.ts)(For Electron) or `AuthService`(For Web). Step 2 requires a client secret granted to CATcher. To protect this, we run a web service, [gatekeeper](https://github.com/CATcher-org/gatekeeper) that executes step 2 on behalf of the client CATcher app.
+The authentication process is kicked off in the `AuthComponent`, but the code that co-ordinates steps 1 and 2 can be found in `oauth.ts` (For Electron) or `AuthService` (For Web). Step 2 requires a client secret granted to CATcher. To protect this, we run a web service, [gatekeeper](https://github.com/CATcher-org/gatekeeper) that executes step 2 on behalf of the client CATcher app.
 
 -------------------------------------------------------------------
 

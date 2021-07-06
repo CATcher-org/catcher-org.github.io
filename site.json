@@ -17,7 +17,19 @@
   ],
   "pages": [
     {
-      "glob": ["**/index.md", "**/*.+(md|mbd)"]
+      "glob": ["**/*.+(md|mbd)"]
+    },
+    {
+      "glob": ["dg/*.+(md|mbd)"],
+      "frontmatter": {
+        "layout": "dg-layout.md"
+      }
+    },
+    {
+      "glob": ["ug/*.+(md|mbd)"],
+      "frontmatter": {
+        "layout": "ug-layout.md"
+      }
     }
   ],
   "deploy": {
