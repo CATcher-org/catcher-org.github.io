@@ -1,96 +1,29 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.18.1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CATcher - DG: Tool stack</title>
-  <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
-  <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
-  <link rel="stylesheet" href="../markbind/css/octicons.css">
-  <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css">
-  <link rel="stylesheet" href="../markbind/css/markbind.min.css">
-  <script src="../markbind/js/polyfill.min.js"></script>
-  <script src="../markbind/js/vue.min.js"></script>
-  <script src="../markbind/js/markbind.min.js"></script>
-  <script src="../markbind/js/jquery.min.js"></script>
-  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
-  <link rel="stylesheet" href="../markbind/layouts/default/styles.css">
-  <link rel="icon" href="/favicon.ico">
-</head>
-
-<body data-spy="scroll" data-target="#page-nav" data-offset="100">
-  <div id="app">
-    <header>
-      <navbar type="dark" class="temp-navbar">
-        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img src="/images/catcher_logo.png" width="40"></a>
-        <a href="/index.html" class="nav-link"> HOME </a>
-        <a href="/ug/index.html" class="nav-link"> USER GUIDE </a>
-        <a href="/dg/index.html" class="nav-link"> DEVELOPER GUIDE </a>
-        <a href="/about-us.html" class="nav-link"> ABOUT US </a>
-        <a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a>
-        <li slot="right">
-          <form class="navbar-form">
-            <searchbar :data="searchData" placeholder="Search" :on-hit="searchCallback" menu-align-right></searchbar>
-          </form>
-        </li>
-      </navbar>
-    </header>
-    <div id="flex-body">
-      <nav id="site-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-right-grey nav-inner position-sticky slim-scroll">
-          <ul class="site-nav-list site-nav-list-root">
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/index.html">DG Home</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/user-workflow.html">User workflow</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/tools.html" class="current">Tools</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/setting-up.html">Setting up</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/design.html">Design</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/dev-workflow.html">Dev workflow</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/testing.html">Testing</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/project-management.html">Project management</a></div>
-            </li>
-            <li>
-              <div class="site-nav-default-list-item site-nav-list-item-0" onclick="handleSiteNavClick(this)"><a href="/dg/future-directions.html">Future directions</a></div>
-            </li>
-          </ul>
-        </div>
-      </nav>
-
-
-      <div id="content-wrapper">
-        <h1 id="tools"><span id="tools" class="anchor"></span>Tools<a class="fa fa-anchor" href="#tools" onclick="event.stopPropagation()"></a></h1>
-        <p>This page introduces you to some important tools/frameworks used by CATcher.</p>
-        <hr>
-        <h2 id="type-script"><span id="type-script" class="anchor"></span>Type Script<a class="fa fa-anchor" href="#type-script" onclick="event.stopPropagation()"></a></h2>
-        <p>Type Script is the main programming language used.</p>
-        <hr>
-        <h2 id="angular"><span id="angular" class="anchor"></span>Angular<a class="fa fa-anchor" href="#angular" onclick="event.stopPropagation()"></a></h2>
-        <p><strong>Angular is a TypeScript-based web application framework.</strong> CATcher is built using Angular and hence our codebase is in Typescript. It is recommended that you familiarise yourself with Typescript as well as Angular before you attempt to work on CATcher.</p>
-        <p><strong>An Angular application is largely made up of Components, Services, and the corresponding HTML and CSS files for each Component.</strong> A Component is a direct representation of visible aspects of an application, while a Service provides useful functionalities to Components where needed. The separation of components and services increases modularity and reusability, as through dependency injection (DI), the service class can provide services to different parts of the application. For more details on the structure of Angular, visit the Angular Guide via the links below. It is also recommended for new developers to do a brief walkthrough of the Angular tutorial (link below) before attempting any fixes on CATcher.</p>
-        <p><strong>The RxJS (Reactive Extensions for Javascript) Library</strong> is part of Angular that supports reactive programming for Javascript. This means that it enables the application to respond to changes in data readily, by allowing instant propagation of changes throughout the application. RxJS library provides support for asynchronous programming through <code class="hljs inline no-lang" v-pre>Observables</code>, <code class="hljs inline no-lang" v-pre>Observers</code> as well as <code class="hljs inline no-lang" v-pre>Promises</code>. <code class="hljs inline no-lang" v-pre>Observers</code> are able to receive updates on changes to the <code class="hljs inline no-lang" v-pre>Observables</code> they are observing, which allows instant updates throughout the application through the use of these objects.</p>
-        <p><strong><em>Pipes</em> are also frequently used in CATcher</strong> to reduce clutter and improve readability of our codebase. It strings together operators in a sequence such that the operators can be applied to the given value in order.</p>
-        <p>Example of custom operators using pipes in CATcher:</p>
-        <pre><code class="hljs" v-pre><span>export function assertSessionDataIntegrity() {
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="generator" content="MarkBind 3.0.4">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CATcher - DG: Tool stack</title>
+    <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
+    <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../markbind/glyphicons/css/bootstrap-glyphicons.min.css">
+    <link rel="stylesheet" href="../markbind/css/octicons.css">
+    <link rel="stylesheet" href="../markbind/css/codeblock-light.min.css"><link rel="stylesheet" href="../markbind/css/markbind.min.css"><script src="../markbind/js/polyfill.min.js"></script>
+    <script src="../markbind/js/vue.min.js"></script>
+    <script src="../markbind/js/markbind.min.js"></script>
+    <script src="tools.page-vue-render.js"></script>
+    <script src="../markbind/js/jquery.min.js"></script><link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
+    
+  <link rel="stylesheet" href="/css/main.css">
+<link rel="icon" href="/favicon.ico"></head>
+<script>
+  const baseUrl = ''
+</script>
+<body >
+<div id="app" data-server-rendered="true"><div data-v-15113a2f><nav class="navbar navbar-expand-md navbar-dark bg-dark" data-v-15113a2f><div class="container-fluid" data-v-15113a2f><div class="navbar-brand" data-v-15113a2f><a href="/index.html" title="Home" class="navbar-brand" data-v-15113a2f><img src="/images/catcher_logo.png" width="40" data-v-15113a2f></a></div> <button type="button" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-v-15113a2f><span class="navbar-toggler-icon" data-v-15113a2f></span> </button> <div class="navbar-collapse collapse" data-v-15113a2f><ul class="navbar-nav mr-auto mt-2 mt-lg-0" data-v-15113a2f> <li data-v-15113a2f><a href="/index.html" class="nav-link" data-v-15113a2f>HOME</a></li> <li data-v-15113a2f><a href="/ug/index.html" class="nav-link" data-v-15113a2f> USER GUIDE </a></li> <li data-v-15113a2f><a href="/dg/index.html" class="nav-link" data-v-15113a2f> DEVELOPER GUIDE </a></li> <li data-v-15113a2f><a href="/about-us.html" class="nav-link" data-v-15113a2f> ABOUT US </a></li> <li data-v-15113a2f><a href="https://github.com/CATcher-org/CATcher" target="_blank" class="nav-link" data-v-15113a2f><span data-v-15113a2f><span aria-hidden="true" class="fab fa-github" data-v-15113a2f></span></span></a></li></ul> <ul class="navbar-nav navbar-right" data-v-15113a2f><li data-v-15113a2f><form class="navbar-form" data-v-15113a2f><div style="position:relative;"><input type="text" placeholder="Search" autocomplete="off" value="" class="form-control"> <ul class="dropdown-menu search-dropdown-menu dropdown-menu-right"></ul></div></form></li></ul></div></div></nav> <div class="lower-navbar-container" style="display:none;" data-v-15113a2f><!----> <!----></div></div> <div id="flex-body"><nav id="site-nav" class="fixed-header-padding" data-v-e8c82f88><div class="site-nav-top" data-v-e8c82f88><div class="font-weight-bold mb-2" style="font-size:1.25rem;" data-v-e8c82f88><span data-v-e8c82f88><strong data-v-e8c82f88><strong data-v-e8c82f88>DEVELOPER GUIDE</strong></strong></span></div></div> <div class="nav-component slim-scroll" data-v-e8c82f88><div data-v-e8c82f88><div class="site-nav-root"><ul class="site-nav-list site-nav-list-root" data-v-e8c82f88><li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/index.html" data-v-e8c82f88>DG Home</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/user-workflow.html" data-v-e8c82f88>User workflow</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/tools.html" data-v-e8c82f88>Tools</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/setting-up.html" data-v-e8c82f88>Setting up</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/design.html" data-v-e8c82f88>Design</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/dev-workflow.html" data-v-e8c82f88>Dev workflow</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/testing.html" data-v-e8c82f88>Testing</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/project-management.html" data-v-e8c82f88>Project management</a></div></li> <li data-v-e8c82f88><div onclick="handleSiteNavClick(this)" class="site-nav-default-list-item site-nav-list-item-0" data-v-e8c82f88><a href="/dg/future-directions.html" data-v-e8c82f88>Future directions</a></div></li> <!----></ul></div></div></div> <!----></nav> <div id="content-wrapper" class="fixed-header-padding"><h1 id="tools"><span id="tools" class="anchor"></span>Tools<a href="#tools" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h1> <p>This page introduces you to some important tools/frameworks used by CATcher.</p> <hr> <h2 id="type-script"><span id="type-script" class="anchor"></span>Type Script<a href="#type-script" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p>Type Script is the main programming language used.</p> <hr> <h2 id="angular"><span id="angular" class="anchor"></span>Angular<a href="#angular" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p><strong>Angular is a TypeScript-based web application framework.</strong> CATcher is built using Angular and hence our codebase is in Typescript. It is recommended that you familiarise yourself with Typescript as well as Angular before you attempt to work on CATcher.</p> <p><strong>An Angular application is largely made up of Components, Services, and the corresponding HTML and CSS files for each Component.</strong> A Component is a direct representation of visible aspects of an application, while a Service provides useful functionalities to Components where needed. The separation of components and services increases modularity and reusability, as through dependency injection (DI), the service class can provide services to different parts of the application. For more details on the structure of Angular, visit the Angular Guide via the links below. It is also recommended for new developers to do a brief walkthrough of the Angular tutorial (link below) before attempting any fixes on CATcher.</p> <p><strong>The RxJS (Reactive Extensions for Javascript) Library</strong> is part of Angular that supports reactive programming for Javascript. This means that it enables the application to respond to changes in data readily, by allowing instant propagation of changes throughout the application. RxJS library provides support for asynchronous programming through <code class="hljs inline no-lang">Observables</code>, <code class="hljs inline no-lang">Observers</code> as well as <code class="hljs inline no-lang">Promises</code>. <code class="hljs inline no-lang">Observers</code> are able to receive updates on changes to the <code class="hljs inline no-lang">Observables</code> they are observing, which allows instant updates throughout the application through the use of these objects.</p> <p><strong><em>Pipes</em> are also frequently used in CATcher</strong> to reduce clutter and improve readability of our codebase. It strings together operators in a sequence such that the operators can be applied to the given value in order.</p> <p>Example of custom operators using pipes in CATcher:</p> <pre><code class="hljs"><span>export function assertSessionDataIntegrity() {
 </span><span>   return pipe(
 </span><span>     throwIfFalse(sessionData =&gt; sessionData !== undefined,
 </span><span>       () =&gt; new Error('Session Data Unavailable')),
@@ -99,21 +32,8 @@
 </span><span>     throwIfFalse(hasOpenPhases,
 </span><span>       () =&gt; new Error('There are no accessible phases.')));
 </span><span> }
-</span></code></pre>
-        <p><strong><strong>Resources:</strong></strong></p>
-        <ol>
-          <li><a href="https://angular.io/guide/architecture">Angular Guide</a> : Official Angular developer guide and introduction to basic Angular topics</li>
-          <li><a href="https://rxjs-dev.firebaseapp.com/guide/observable">RxJS Guide</a> : Official RxJS guide on Observables, Observers, Operators, Subscription, etc.</li>
-          <li><a href="https://angular.io/guide/dependency-injection-navtree">Angular Guide on Navigation of Component Tree</a> : Guide on how to navigate the component tree with Dependency Injection</li>
-          <li><a href="https://angular.io/tutorial">Angular Tutorial</a> : Official Angular tutorials</li>
-        </ol>
-        <hr>
-        <h2 id="electron"><span id="electron" class="anchor"></span>Electron<a class="fa fa-anchor" href="#electron" onclick="event.stopPropagation()"></a></h2>
-        <p>Electron is a tool that allows developers to build cross-platform desktop applications with Javascript, HTML, and CSS. It basically allows us to &quot;convert&quot; the web version of CATcher into a desktop application through the APIs provided by Electron.</p>
-        <p>The Electron framework launches a main process and a renderer process.
-          The CATcher app runs within the renderer process, while the main process handles system events that occur during the app's lifecycle. Electron provides a message-passing API to facilitate inter-process communication.</p>
-        <p>A snippet from our app's main process code:</p>
-        <pre><code class="hljs" v-pre><span>ipcMain.on('github-oauth', (event, repoPermissionLevel) =&gt; {
+</span></code></pre><p><strong><strong>Resources:</strong></strong></p> <ol><li><a href="https://angular.io/guide/architecture">Angular Guide</a> : Official Angular developer guide and introduction to basic Angular topics</li> <li><a href="https://rxjs-dev.firebaseapp.com/guide/observable">RxJS Guide</a> : Official RxJS guide on Observables, Observers, Operators, Subscription, etc.</li> <li><a href="https://angular.io/guide/dependency-injection-navtree">Angular Guide on Navigation of Component Tree</a> : Guide on how to navigate the component tree with Dependency Injection</li> <li><a href="https://angular.io/tutorial">Angular Tutorial</a> : Official Angular tutorials</li></ol> <hr> <h2 id="electron"><span id="electron" class="anchor"></span>Electron<a href="#electron" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p>Electron is a tool that allows developers to build cross-platform desktop applications with Javascript, HTML, and CSS. It basically allows us to &quot;convert&quot; the web version of CATcher into a desktop application through the APIs provided by Electron.</p> <p>The Electron framework launches a main process and a renderer process.
+The CATcher app runs within the renderer process, while the main process handles system events that occur during the app's lifecycle. Electron provides a message-passing API to facilitate inter-process communication.</p> <p>A snippet from our app's main process code:</p> <pre><code class="hljs"><span>ipcMain.on('github-oauth', (event, repoPermissionLevel) =&gt; {
 </span><span>  Logger.info('Starting authentication');
 </span><span>  getAccessToken(win, repoPermissionLevel).then((data) =&gt; {
 </span><span>    Logger.info('Obtained access token from Github');
@@ -124,71 +44,9 @@
 </span><span>      isWindowClosed: error.message === 'WINDOW_CLOSED'});
 </span><span>  });
 </span><span>});
-</span></code></pre>
-        <p><strong><strong>Resources:</strong></strong></p>
-        <ol>
-          <li><a href="https://www.electronjs.org/docs/tutorial">Official Electron Guide</a> : This is the official Electron documentation</li>
-        </ol>
-        <hr>
-        <h2 id="graphql"><span id="graphql" class="anchor"></span>GraphQL<a class="fa fa-anchor" href="#graphql" onclick="event.stopPropagation()"></a></h2>
-        <p>GraphQL is a query language for APIs.</p>
-        <p>In CATcher, it is to communicate with the Github backend. It allows us to define a schema for the data that we receive from github, and also performs validation for the data we reqeust for, such that the data we receive from Github is exactly what we need, nothing more, nothing less. The extra layer of GraphQL is one that makes the process of data retrieval in CATcher more streamlined.</p>
-        <p>The GraphQL queries used by CATcher are defined under the <code class="hljs inline no-lang" v-pre>graphql</code> folder in the codebase.</p>
-        <hr>
-        <h2 id="oauth-2-0"><span id="oauth-2-0" class="anchor"></span>OAuth 2.0<a class="fa fa-anchor" href="#oauth-2-0" onclick="event.stopPropagation()"></a></h2>
-        <p>CATcher uses the OAuth 2.0 protocol to authenticate users. Below is a summary of the authentication process:</p>
-        <ol>
-          <li>
-            <p>A user launches CATcher, and is prompted to log into GitHub. This is a direct interaction between the user and GitHub. Once the user has logged in, GitHub provides CATcher with an authorization code meant for this user.</p>
-          </li>
-          <li>
-            <p>CATcher sends this authorization code and its own client secret to GitHub's authorization server - in exchange for an access token.</p>
-          </li>
-          <li>
-            <p>Authentication is complete, and CATcher can now use the access token when it uses the GitHub API for its logic (e.g. submitting new issues, editing existing issues)</p>
-          </li>
-        </ol>
-        <p>The authentication process is kicked off in the <code class="hljs inline no-lang" v-pre>AuthComponent</code>, but the code that co-ordinates steps 1 and 2 can be found in <a href="/oauth.ts"><code class="hljs inline no-lang" v-pre>oauth.ts</code></a>(For Electron) or <code class="hljs inline no-lang" v-pre>AuthService</code>(For Web). Step 2 requires a client secret granted to CATcher. To protect this, we run a web service, <a href="https://github.com/CATcher-org/gatekeeper">gatekeeper</a> that executes step 2 on behalf of the client CATcher app.</p>
-        <hr>
-        <h2 id="testing-tools"><span id="testing-tools" class="anchor"></span>Testing tools<a class="fa fa-anchor" href="#testing-tools" onclick="event.stopPropagation()"></a></h2>
-        <p>Described in the <a href="/dg/testing.html">Testing</a> page.
-          <i class="fa fa-arrow-circle-up fa-lg" id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true"></i>
-        </p>
-      </div>
-      <nav id="page-nav" class="navbar navbar-light bg-transparent">
-        <div class="border-left-grey nav-inner position-sticky slim-scroll">
-
-          <nav class="nav nav-pills flex-column my-0 small no-flex-wrap">
-            <a class="nav-link py-1" href="#tools">Tools&#x200E;</a>
-            <nav class="nav nav-pills flex-column my-0 nested no-flex-wrap">
-              <a class="nav-link py-1" href="#type-script">Type Script&#x200E;</a>
-              <a class="nav-link py-1" href="#angular">Angular&#x200E;</a>
-              <a class="nav-link py-1" href="#electron">Electron&#x200E;</a>
-              <a class="nav-link py-1" href="#graphql">GraphQL&#x200E;</a>
-              <a class="nav-link py-1" href="#oauth-2-0">OAuth 2.0&#x200E;</a>
-              <a class="nav-link py-1" href="#testing-tools">Testing tools&#x200E;</a>
-            </nav>
-
-          </nav>
-        </div>
-      </nav>
-    </div>
-    <footer>
-
-      <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.18.1</a>]</small>
-      </div>
-    </footer>
-  </div>
-</body>
-<script src="../markbind/js/bootstrap-utility.min.js"></script>
+</span></code></pre><p><strong><strong>Resources:</strong></strong></p> <ol><li><a href="https://www.electronjs.org/docs/tutorial">Official Electron Guide</a> : This is the official Electron documentation</li></ol> <hr> <h2 id="graphql"><span id="graphql" class="anchor"></span>GraphQL<a href="#graphql" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p>GraphQL is a query language for APIs.</p> <p>In CATcher, it is to communicate with the Github backend. It allows us to define a schema for the data that we receive from github, and also performs validation for the data we reqeust for, such that the data we receive from Github is exactly what we need, nothing more, nothing less. The extra layer of GraphQL is one that makes the process of data retrieval in CATcher more streamlined.</p> <p>The GraphQL queries used by CATcher are defined under the <code class="hljs inline no-lang">graphql</code> folder in the codebase.</p> <hr> <h2 id="oauth-2-0"><span id="oauth-2-0" class="anchor"></span>OAuth 2.0<a href="#oauth-2-0" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p>CATcher uses the OAuth 2.0 protocol to authenticate users. Below is a summary of the authentication process:</p> <ol><li><p>A user launches CATcher, and is prompted to log into GitHub. This is a direct interaction between the user and GitHub. Once the user has logged in, GitHub provides CATcher with an authorization code meant for this user.</p></li> <li><p>CATcher sends this authorization code and its own client secret to GitHub's authorization server - in exchange for an access token.</p></li> <li><p>Authentication is complete, and CATcher can now use the access token when it uses the GitHub API for its logic (e.g. submitting new issues, editing existing issues)</p></li></ol> <p>The authentication process is kicked off in the <code class="hljs inline no-lang">AuthComponent</code>, but the code that co-ordinates steps 1 and 2 can be found in <code class="hljs inline no-lang">oauth.ts</code> (For Electron) or <code class="hljs inline no-lang">AuthService</code> (For Web). Step 2 requires a client secret granted to CATcher. To protect this, we run a web service, <a href="https://github.com/CATcher-org/gatekeeper">gatekeeper</a> that executes step 2 on behalf of the client CATcher app.</p> <hr> <h2 id="testing-tools"><span id="testing-tools" class="anchor"></span>Testing tools<a href="#testing-tools" onclick="event.stopPropagation()" class="fa fa-anchor"></a></h2> <p>Described in the <a href="/dg/testing.html">Testing</a> page.</p> <i id="scroll-top-button" onclick="handleScrollTop()" aria-hidden="true" class="fa fa-arrow-circle-up fa-lg d-print-none"></i></div></div> <footer><div class="text-center"><small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 3.0.4</a>, generated on Tue, 6 Jul 2021, 7:55:27 UTC]</small></div></footer></div>
+</body><script src="../markbind/js/bootstrap-utility.min.js"></script>
 <script>
-  const baseUrl = ''
   MarkBind.setupWithSearch()
 </script>
-<script src="../markbind/layouts/default/scripts.js"></script>
-<script>
-  if (MarkBind.AfterSetup) MarkBind.AfterSetup()
-</script>
-
 </html>
