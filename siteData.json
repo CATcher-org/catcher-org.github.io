@@ -64,8 +64,8 @@
       "title": "DG: Project management",
       "headings": {
         "project-management": "Project management",
-        "creating-a-release": "Creating a release",
-        "releasing-a-new-version": "Releasing a new version"
+        "automated-release": "Automated release",
+        "manual-release": "Manual release"
       },
       "headingKeywords": {}
     },
