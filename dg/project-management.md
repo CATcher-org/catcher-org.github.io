@@ -14,7 +14,7 @@ This page contains info relevant to project management activities, typically don
 
 ## Automated release
 
-Follow these steps to create an automated release using this workflow:
+Follow these steps to release a new version of CATcher using a GitHub Actions' workflow.
 1. Create and merge a Pull Request that updates CATcher's version number in the `package.json` file.
 2. Navigate to the `Actions` Tab of the `CATcher` repository and start the `Draft Deployment` Workflow.
     - This workflow deploys the web app and creates a Draft Release containing the desktop app's executables
