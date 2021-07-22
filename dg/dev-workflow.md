@@ -20,5 +20,11 @@ Given below are some guidelines to follow when submitting PRs.
 ---
 ## Submitting PRs
 
-* When you submit a PR, also propose a commit message to be used when the PR is merged eventually. You can include the proposed commit message in the PR description.<br>
-  Follow [these se-edu guidelines](https://se-education.org/guides/conventions/git.html) when proposing the commit message.
+* A Pull Request should include the following information:
+  1. A summary of what the PR does
+  2. A description of the changes made
+  3. A proposed commit message to be used when the PR is merged
+
+The default PR template is provided for you when you create a PR on any CATcher repository. It is recommended that you follow the template.
+
+* Please follow [these se-edu guidelines](https://se-education.org/guides/conventions/git.html) when crafting the commit message.
