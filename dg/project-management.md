@@ -26,7 +26,7 @@ Follow these steps to release a new version of CATcher using a GitHub Actions' w
 
 ## Manual release
 
-Follow these steps to create a manual release:
+Follow these steps to manually release a new version of CATcher:
 1. Create and merge a Pull Request that updates CATcher's version number in the `package.json` file.
 2. Build the CATcher desktop application's executables for Linux, MacOS and Windows
 3. Build the CATcher web application, and then deploy it onto CATcher's [GitHub Pages site](https://catcher-org.github.io/CATcher/)
