@@ -1,0 +1,44 @@
+@startuml
+participant User
+box "CATcher" #LightBlue
+participant ":AuthComponent" as AuthComponent
+participant ":AuthService" as AuthService
+end box
+
+User -> AuthComponent: setupSession()
+
+activate AuthComponent
+
+AuthComponent -> AuthService: startOAuthProcess()
+
+activate AuthService
+
+AuthService -> Github: Github GET request for auth code
+activate Github
+
+Github --> AuthService: auth code receieved 
+deactivate Github
+AuthService --> AuthComponent: auth code receieved
+deactivate AuthService
+
+AuthComponent -> AuthComponent: fetchAccessToken(oauthCode, state)
+activate AuthComponent
+AuthComponent -> Gatekeeper: Gatekeeper GET request
+
+activate Gatekeeper
+Gatekeeper -> Gatekeeper: authenticate()
+activate Gatekeeper
+Gatekeeper -> Github: Github GET request for access token
+activate Github
+Github --> Gatekeeper: access token received
+deactivate Gatekeeper
+deactivate Github
+
+Gatekeeper --> AuthComponent: access token receieved
+deactivate Gatekeeper
+deactivate AuthComponent
+
+AuthComponent-> User: OAuth process complete
+deactivate AuthComponent
+deactivate User
+@enduml
