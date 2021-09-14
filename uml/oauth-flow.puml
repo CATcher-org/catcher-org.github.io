@@ -13,10 +13,13 @@ AuthComponent -> AuthService: startOAuthProcess()
 
 activate AuthService
 
-AuthService -> Github: Github GET request for auth code
+AuthService -> Github: call Github GET request for auth code
 activate Github
 
-Github --> AuthService: auth code receieved 
+Github -> User: Github prompts user to select account for signing in and authorizing CATcher
+User --> Github: User signs in to receive auth code and gets redirected back to CATcher
+
+Github --> AuthService: auth code gets passed on
 deactivate Github
 AuthService --> AuthComponent: auth code receieved
 deactivate AuthService
@@ -28,17 +31,17 @@ AuthComponent -> Gatekeeper: Gatekeeper GET request
 activate Gatekeeper
 Gatekeeper -> Gatekeeper: authenticate()
 activate Gatekeeper
-Gatekeeper -> Github: Github GET request for access token
+Gatekeeper -> Github: call Github POST request to exchange code with access token
 activate Github
 Github --> Gatekeeper: access token received
 deactivate Gatekeeper
 deactivate Github
 
-Gatekeeper --> AuthComponent: access token receieved
+Gatekeeper --> AuthComponent: access token received
 deactivate Gatekeeper
 deactivate AuthComponent
 
-AuthComponent-> User: OAuth process complete
+AuthComponent--> User: OAuth process complete
 deactivate AuthComponent
 deactivate User
 @enduml
