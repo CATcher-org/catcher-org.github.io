@@ -77,7 +77,10 @@
         "getting-started": "Getting started",
         "dev-commands": "Dev commands",
         "debugging": "Debugging",
-        "writing-documentation": "Writing Documentation"
+        "writing-documentation": "Writing Documentation",
+        "tasks-to-self-test-knowledge": "Tasks To Self-Test Knowledge",
+        "backend": "Backend",
+        "frontend": "Frontend"
       },
       "headingKeywords": {}
     },
