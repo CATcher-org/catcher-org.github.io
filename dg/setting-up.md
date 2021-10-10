@@ -74,7 +74,7 @@ When you need to update documentation, you'll need to fork and clone that repo t
 
 ## Tasks To Self-Test Knowledge
 
-These tasks assume basic understanding of `Angular` and `Type Script` as the backbones of `CATcher`.
+These tasks assume basic understanding of `Angular` and `TypeScript`.
 If you wish to know more about them, you can visit our [tools page](tools.html).
 
 ### Backend
