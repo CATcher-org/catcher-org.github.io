@@ -87,28 +87,28 @@ If you wish to know more about them, you can visit our [tools page](tools.html).
 
   ![](../images/error-snackbar.png)
 
-  1. To help you see the error snack bar, first launch your `CATcher` locally.
-  2. Enter `null` inside Settings Location input and click submit.
+  1. To help you see the error snack bar, first launch `CATcher` locally.
+  2. Enter `null` inside the Settings Location input and click submit.
   3. On the bottom of your browser, a pop-up "Failed to fetch settings file." should appear.
-  4. If you wait long enough, you will see that it doesn't close by itself, you have to manually click the close button.
+  4. You will see that it doesn't close by itself; you have to manually click the close button.
 
   **Your Task**
 
-  Make the error snack bar shown above dissapear automatically after 3 seconds of showing up.
+  Make the error snack bar disappear automatically, after being displayed for 3 seconds.
 
   <panel header="Hint 1" type="info">
 
-  First, you need to be able to locate which are the files responsible for error handling.
-  When searching for related files, knowing the name of the frontend component you are working with is often useful.
-  In this task, the name of the frontend component is `MatSnackBar`. Try to search where it's being used.
-  For more information on `MatSnackBar` itself, you can read the documentation [here](https://material.angular.io/components/snack-bar/overview).
+  First, you need to locate the files responsible for error handling.
+  When searching for the relevant files, it is useful to know the name of the frontend component involved.
+  In this task, the name of the frontend component is `MatSnackBar`. Try to find out where it's used.
+  For more information on `MatSnackBar`, you can read the documentation [here](https://material.angular.io/components/snack-bar/overview).
 
   </panel>
 
   <panel header="Hint 2" type="info">
 
   You should find that our related file is `error-handling.service.ts`.
-  All that's left is just to figure out how to tell `snackBar` to close after a certain amount of time has passed.
+  All that's left is to figure out how to tell `snackBar` to close after a certain amount of time.
   There are multiple ways to do this. One way is to use `setTimeout` function on the `snackBarRef.dismiss()` like this:
   ```typescript
   const snackBarRef = this.snackBar.openFromComponent(GeneralMessageErrorComponent, {data: error});
@@ -121,7 +121,7 @@ If you wish to know more about them, you can visit our [tools page](tools.html).
 
   <panel header="Suggested solution" type="info">
 
-  There is more than 1 way to achieve this. By combining the changes in hint 1 and hint 2, you should be able to get a possible solution.
+  There is more than 1 way to achieve this. By combining the changes in hint 1 and hint 2, you should be able to reach a solution.
   <panel header="error-handling.service.ts" type="success">
 
   ```typescript
