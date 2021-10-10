@@ -69,3 +69,151 @@ In summary, the following steps are needed:
 When you need to update documentation, you'll need to fork and clone that repo to your computer as well.
 
 **We use [MarkBind](https://markbind.org/) for documentation**. Follow [this tutorial](https://se-education.org/guides/tutorials/markbind.html) to learn how to use MarkBind for updating project documentation.
+
+-----------------------------------------------------------------------------------
+
+## Tasks To Self-Test Knowledge
+
+These tasks assume a basic understanding of `Angular` and `TypeScript`.
+If you wish to know more about them, you can visit our [tools page](tools.html).
+
+### Backend
+
+### Frontend
+
+<panel header="**Task 1: Make error snack bars automatically close**" type="primary">
+
+  **Task 1: Make error snack bars automatically close**
+
+  ![](../images/error-snackbar.png)
+
+  1. To help you see the error snack bar, first launch `CATcher` locally.
+  2. Enter `null` inside the Settings Location input and click submit.
+  3. On the bottom of your browser, a pop-up "Failed to fetch settings file." should appear.
+  4. You will see that it doesn't close by itself; you have to manually click the close button.
+
+  **Your Task**
+
+  Make the error snack bar disappear automatically, after being displayed for 3 seconds.
+
+  <panel header="Hint 1" type="info">
+
+  First, you need to locate the files responsible for error handling.
+  When searching for the relevant files, it is useful to know the name of the frontend component involved.
+  In this task, the name of the frontend component is `MatSnackBar`. Try to find out where it's used.
+  For more information on `MatSnackBar`, you can read the documentation [here](https://material.angular.io/components/snack-bar/overview).
+
+  </panel>
+
+  <panel header="Hint 2" type="info">
+
+  You should find that our related file is `error-handling.service.ts`.
+  All that's left is to figure out how to tell `snackBar` to close after a certain amount of time.
+  There are multiple ways to do this. One way is to use `setTimeout` function on the `snackBarRef.dismiss()` like this:
+  ```typescript
+  const snackBarRef = this.snackBar.openFromComponent(GeneralMessageErrorComponent, {data: error});
+  setTimeout(() => {
+    snackBarRef.dismiss();
+  }, this.snackBarAutoCloseTime);
+  ```
+
+  </panel>
+
+  <panel header="Suggested solution" type="info">
+
+  There is more than 1 way to achieve this. By combining the changes in hint 1 and hint 2, you should be able to reach a solution.
+  <panel header="error-handling.service.ts" type="success">
+
+  ```typescript
+  import { ErrorHandler, Injectable } from '@angular/core';
+  import { MatSnackBar, MatSnackBarRef } from '@angular/material';
+  import { GeneralMessageErrorComponent } from '../../shared/error-toasters/general-message-error/general-message-error.component';
+  import { FormErrorComponent } from '../../shared/error-toasters/form-error/form-error.component';
+  import { HttpErrorResponse } from '@angular/common/http';
+  import { RequestError } from '@octokit/request-error';
+  import { LoggingService } from './logging.service';
+
+  export const ERRORCODE_NOT_FOUND = 404;
+
+  const FILTERABLE = ['node_modules'];
+
+  @Injectable({
+    providedIn: 'root',
+  })
+  export class ErrorHandlingService implements ErrorHandler {
+    snackBarAutoCloseTime = 3000;
+
+    constructor(private snackBar: MatSnackBar, private logger: LoggingService) {}
+
+    handleError(error: HttpErrorResponse | Error | RequestError, actionCallback?: () => void) {
+      this.logger.error(error);
+      if (error instanceof Error) {
+        this.logger.error(this.cleanStack(error.stack));
+      }
+      if (error instanceof HttpErrorResponse || error instanceof RequestError) {
+        this.handleHttpError(error, actionCallback);
+      } else {
+        this.handleGeneralError(error.message || JSON.stringify(error));
+      }
+    }
+
+    private addAutoClose<T>(snackBarRef: MatSnackBarRef<T>) {
+      setTimeout(() => {
+        snackBarRef.dismiss();
+      }, this.snackBarAutoCloseTime);
+    }
+
+    private cleanStack(stacktrace: string): string {
+      return stacktrace
+              .split('\n')
+              .filter(line => !FILTERABLE.some(word => line.includes(word))) // exclude lines that contain words in FILTERABLE
+              .join('\n');
+    }
+
+    // Ref: https://developer.github.com/v3/#client-errors
+    private handleHttpError(error: HttpErrorResponse | RequestError, actionCallback?: () => void): void {
+      let snackBarRef = null;
+      // Angular treats 304 Not Modified as an error, we will ignore it.
+      if (error.status === 304) {
+        return;
+      }
+
+      if (!navigator.onLine) {
+        snackBarRef = this.handleGeneralError('No Internet Connection');
+        this.addAutoClose(snackBarRef);
+        return;
+      }
+
+      switch (error.status) {
+        case 500: // Internal Server Error.
+          snackBarRef = this.snackBar.openFromComponent(GeneralMessageErrorComponent, {data: error});
+          break;
+        case 422: // Form errors
+          snackBarRef = this.snackBar.openFromComponent(FormErrorComponent, {data: error});
+          break;
+        case 400: // Bad request
+        case 401: // Unauthorized
+        case 404: // Not found
+          snackBarRef = this.snackBar.openFromComponent(GeneralMessageErrorComponent, {data: error});
+          break;
+        default:
+          snackBarRef = this.snackBar.openFromComponent(GeneralMessageErrorComponent, {data: error});
+      }
+
+      if (snackBarRef) {
+        this.addAutoClose(snackBarRef);
+      }
+    }
+
+    private handleGeneralError(error: string): void {
+      const snackBarRef = this.snackBar.openFromComponent(GeneralMessageErrorComponent, {data: {message: error}});
+      this.addAutoClose(snackBarRef);
+    }
+  }
+  ```
+
+  </panel>
+
+  </panel>
+
+</panel>
