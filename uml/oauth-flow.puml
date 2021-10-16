@@ -1,0 +1,38 @@
+@startuml
+Actor User
+Participant CATcher
+
+User -> CATcher: Select session
+
+activate CATcher
+
+CATcher -> GitHub: Redirect to GitHub for authentication
+activate GitHub
+
+GitHub -> User: Prompt user to login and authorise CATcher
+User --> GitHub: Complete authentication and authorisation
+
+GitHub --> CATcher: Redirect to CATcher with auth code
+deactivate GitHub
+
+CATcher -> Gatekeeper: Request for access token, in exchange for auth code
+
+activate Gatekeeper
+Gatekeeper -> GitHub: Request for access token, in exchange for auth code
+activate GitHub
+GitHub --> Gatekeeper: Respond with access token
+deactivate GitHub
+
+Gatekeeper --> CATcher: Respond with access token
+deactivate Gatekeeper
+
+CATcher --> User: Show that login was successful, prompt user to confirm account
+User -> CATcher: Confirm account
+CATcher -> GitHub: Initialise session (create repo if needed)
+activate GitHub
+GitHub --> CATcher
+deactivate GitHub
+CATcher --> User: Display dashboard for the open phase
+deactivate CATcher
+deactivate User
+@enduml
