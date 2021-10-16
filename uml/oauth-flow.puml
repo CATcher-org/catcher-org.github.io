@@ -1,47 +1,38 @@
 @startuml
-participant User
-box "CATcher" #LightBlue
-participant ":AuthComponent" as AuthComponent
-participant ":AuthService" as AuthService
-end box
+Actor User
+Participant CATcher
 
-User -> AuthComponent: setupSession()
+User -> CATcher: Select session
 
-activate AuthComponent
+activate CATcher
 
-AuthComponent -> AuthService: startOAuthProcess()
+CATcher -> GitHub: Redirect to GitHub for authentication
+activate GitHub
 
-activate AuthService
+GitHub -> User: Prompt user to login and authorise CATcher
+User --> GitHub: Complete authentication and authorisation
 
-AuthService -> Github: call Github GET request for auth code
-activate Github
+GitHub --> CATcher: Redirect to CATcher with auth code
+deactivate GitHub
 
-Github -> User: Github prompts user to select account for signing in and authorizing CATcher
-User --> Github: User signs in to receive auth code and gets redirected back to CATcher
-
-Github --> AuthService: auth code gets passed on
-deactivate Github
-AuthService --> AuthComponent: auth code receieved
-deactivate AuthService
-
-AuthComponent -> AuthComponent: fetchAccessToken(oauthCode, state)
-activate AuthComponent
-AuthComponent -> Gatekeeper: Gatekeeper GET request
+CATcher -> Gatekeeper: Request for access token, in exchange for auth code
 
 activate Gatekeeper
-Gatekeeper -> Gatekeeper: authenticate()
-activate Gatekeeper
-Gatekeeper -> Github: call Github POST request to exchange code with access token
-activate Github
-Github --> Gatekeeper: access token received
-deactivate Gatekeeper
-deactivate Github
+Gatekeeper -> GitHub: Request for access token, in exchange for auth code
+activate GitHub
+GitHub --> Gatekeeper: Respond with access token
+deactivate GitHub
 
-Gatekeeper --> AuthComponent: access token received
+Gatekeeper --> CATcher: Respond with access token
 deactivate Gatekeeper
-deactivate AuthComponent
 
-AuthComponent--> User: OAuth process complete
-deactivate AuthComponent
+CATcher --> User: Show that login was successful, prompt user to confirm account
+User -> CATcher: Confirm account
+CATcher -> GitHub: Initialise session (create repo if needed)
+activate GitHub
+GitHub --> CATcher
+deactivate GitHub
+CATcher --> User: Display dashboard for the open phase
+deactivate CATcher
 deactivate User
 @enduml
