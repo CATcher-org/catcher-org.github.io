@@ -15,6 +15,10 @@ The CATcher project is based in the [School of Computing, National University of
 * Kang Su Min
 * Low Jun Kai, Sean
 * Prithivi Raj
+* Audrey Felicio Anwar
+* Chang Rui Feng
+* Dylan Ghee Shao Kang
+* Ngo Duc Binh
 
 
 ### Past team members
