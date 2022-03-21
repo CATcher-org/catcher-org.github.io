@@ -56,3 +56,11 @@ The repositories used for initial bug reporting will be created automatically by
   This must be a public repo with write access given to students.
 * A repo to hold bugs for tutors to moderate e.g., `module-org/pe-moderation`<br>
   This can be a private repo with write access given to tutors.
+
+#### Creating a session link for students
+
+A list of profiles can be modified in `profiles.json` in the repository `client_data`. 
+
+To create a session link, add the name of the session after this url: `https://catcher-org.github.io/CATcher/?session=`. This profile name must correspond exactly to the `profileName` value in `profiles.json`. 
+
+Students can access the session link to apply the corresponding session to the field if the profile name is valid from the list of profiles. Students can then click the Submit button to enter the session specified without selecting from the dropdown.
