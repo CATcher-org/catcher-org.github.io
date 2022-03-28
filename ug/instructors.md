@@ -87,4 +87,4 @@ To create a session link, instructors will need to encode this url `https://catc
 
 For example, for profile name `"CS2103/T Alpha Test"`, the url will be `https://catcher-org.github.io/CATcher/?session=CS2103%2FT%20Alpha%20Test`.
 
-If the profile name is valid, students can access the link to select the corresponding session automatically. Students can then click the Submit button to enter the intended session without selecting from the dropdown.
+If the profile name is valid, students can access the link to select the corresponding session automatically. Students can then click the **Submit** button to enter the intended session without selecting from the dropdown.
