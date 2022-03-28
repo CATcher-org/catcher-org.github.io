@@ -162,8 +162,9 @@
       "title": "UG: for instructors",
       "headings": {
         "catcher-user-guide-for-instructors": "CATcher User Guide (for instructors)",
-        "configuring-the-org": "Configuring the org",
-        "setting-up-repos": "Setting up repos"
+        "configuring-the-organization": "Configuring the organization",
+        "setting-up-repositories": "Setting up repositories",
+        "creating-a-session-link-for-students": "Creating a session link for students"
       },
       "headingKeywords": {}
     }
