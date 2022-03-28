@@ -60,10 +60,10 @@ The following repositories will be created automatically by CATcher:
 
 This repository must contain a **`profiles.json`** file.
 
-* **`profiles.jsonn`**
+* **`profiles.json`**
   * Must contain the following information:
-  1. Profile Name
-  2. Name of Settings repository
+    1. Profile Name
+    2. Name of Settings repository
   * Example https://github.com/CATcher-org/client_data/blob/master/profiles.json
 
 
@@ -83,6 +83,8 @@ The repositories used for initial bug reporting will be created automatically by
 
 A list of profiles can be modified in the Profile repository. 
 
-To create a session link, add the name of the session after this url: `https://catcher-org.github.io/CATcher/?session=`. This profile name must correspond exactly to the profile name in Profile repository. 
+To create a session link, instructors will need to encode this url `https://catcher-org.github.io/CATcher/?session=PROFILE_NAME` where `PROFILE_NAME` is the profile name of the session. This profile name must correspond exactly to the profile name in the Profile repository. 
+
+For example, for profile name `"CS2103/T Alpha Test"`, the url will be `https://catcher-org.github.io/CATcher/?session=CS2103%2FT%20Alpha%20Test`.
 
 Students can access the session link to apply the corresponding session to the field if the profile name is valid from the list of profiles. Students can then click the Submit button to enter the session specified without selecting from the dropdown.
