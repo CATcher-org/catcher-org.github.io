@@ -12,13 +12,89 @@ This page contains information useful for testing of CATcher.
 
 -------------------------------------------------------------------------------------
 
-## Loading custom sessions
+## Setting up custom CATcher sessions
 
-This is a hidden CATcher feature useful for manual testing.
+Sometimes, it may be useful to create and use your own custom CATcher session for manual testing, instead of using the default session on `CATcher-org` that is shared among the CATcher developers. 
 
-If your sessions are not present in the default dropdown list on CATcher's startup page, you can load custom sessions by clicking on the **file icon** beside the session dropdown.
+### Setting up repositories
 
-Following which, submit a file with the `.json` file extension, where the format is specified below.
+A repository containing the settings for the custom session must be set up for CATcher to store and retrieve the issues properly. The easiest way to do this is to fork the [`CATcher-org/public_data` repository](https://github.com/CATcher-org/public_data) and to edit the `settings.json` and `data.csv` files accordingly.
+
+<panel type="seamless" header="##### Configuring `settings.json`">
+
+If the `public_data` repository was forked, the `settings.json` file would look like this:
+
+```json
+{
+  "openPhases" : ["phaseBugReporting", "phaseTeamResponse", "phaseTesterResponse", "phaseModeration"],
+  "phaseBugReporting": "bugreporting",
+  "phaseTeamResponse": "pe-results",
+  "phaseTesterResponse": "bugreporting",
+  "phaseModeration": "pe-evaluation"
+}
+```
+
+The `openPhases` property specifies the phases that are open. It is recommended to leave all the phases open for testing purposes. Do note that the Tutor Moderation phase is still under development. 
+
+The other four properties specify the name of the repositories that CATcher will store and retrieve from. In the example above, CATcher will retrive issues from the `bugreporting` repository for the Bug Reporting and Tester Response phases, and will retrive issues from the `pe-results` and `pe-evaluation` repositories for the Team Response and Tutor Moderation phases accordingly. If the repositories do not exist, CATcher will create them automatically.
+
+<box type="info" seamless>
+
+The repositories used for the Bug Reporting and Tester Response phases will be stored on the **user's** Github account, while the repositories used for the Team Response and Tutor Moderation phases will be stored on the **organisation's** Github account. 
+</box>
+
+</panel>
+
+<panel type="seamless" header="##### Configuring `data.csv`">
+
+The `data.csv` file contains three columns - the role of the user (Student, Tutor and Admin), the user's Github username and the team allocated to the user. Do add your own username to this file in order to use CATcher.
+
+<box type="info" seamless>
+
+Do note the following:
+- Students and Tutors must have be allocated to a team.
+- Tutors can be allocated to multiple teams, but each team allocated must be on its own row.
+</box>
+
+</panel>
+
+### Populating issues in CATcher repositories
+
+In CATcher, submitting a bug in the Bug Reporting phase will create a Github issue in the corresponding repository with the appropriate format and labels. For subsequent phases, the responses are stored as Github comments of that particular issue, and these comments must be of a certain format for CATcher to parse them correctly. 
+
+<panel type="seamless" header="##### Team Response Phase">
+
+**Comment Format:**
+
+<include src="user-workflow.md#team-response-format" />
+
+**Issue Labels required:**
+- `severity.*`, e.g. `severity.Low`
+- `type.*`, e.g. `type.DocumentationBug`
+- `tutorial.*`, e.g. `tutorial.CS2103T-W12`
+- `team.*`, e.g. `team.3`
+
+</panel>
+
+<panel type="seamless" header="##### Tester Response Phase">
+
+**Comment Format:**
+
+<include src="user-workflow.md#tester-response-format" />
+
+**Issue Labels required:**
+- `severity.*`, e.g. `severity.Low`
+- `type.*`, e.g. `type.DocumentationBug`
+
+</panel>
+
+### Loading the custom session
+
+The custom session will not present in the default dropdown list on CATcher's startup page, so it can be loaded by clicking on the **file icon** beside the session dropdown. Following which, submit a file with the `.json` file extension, where the format is specified below.
+
+<panel type="seamless" header="##### Session JSON file">
+
+The format of the JSON file to be submitted is as follows:
 
 ```json
 {
@@ -31,11 +107,13 @@ Following which, submit a file with the `.json` file extension, where the format
 }
 ```
 
-The json supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `encodedText` fields.
+The JSON file supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `encodedText` fields.
 
 `profileName` refers to the profile name displayed in the session select page. `encodedText` refers to the repository which stores the required settings for your custom session. The `encodedText` will be in the format of `organisation/repository`.
 
 > **Note**: You **must** have both of these fields in each `Profile` and the values for these fields **should not be empty**! Else, the `.json` file that you have supplied will not be parsed successfully.
+
+</panel>
 
 -------------------------------------------------------------------------------------
 
