@@ -16,7 +16,7 @@ This page contains information useful for testing of CATcher.
 
 Sometimes, it may be useful to create and use your own custom CATcher session for manual testing, instead of using the default session on `CATcher-org` that is shared among the CATcher developers. 
 
-### Setting up repositories
+### Setting up GitHub repositories
 
 A repository containing the settings for the custom session must be set up for CATcher to store and retrieve the issues properly. The easiest way to do this is to fork the [`CATcher-org/public_data` repository](https://github.com/CATcher-org/public_data) and to edit the `settings.json` and `data.csv` files accordingly.
 
@@ -40,14 +40,14 @@ The other four properties specify the name of the repositories that CATcher will
 
 <box type="info" seamless>
 
-The repositories used for the Bug Reporting and Tester Response phases will be stored on the **user's** Github account, while the repositories used for the Team Response and Tutor Moderation phases will be stored on the **organisation's** Github account. 
+The repositories used for the Bug Reporting and Tester Response phases will be stored on the **user's** GitHub account, while the repositories used for the Team Response and Tutor Moderation phases will be stored on the **organisation's** GitHub account. 
 </box>
 
 </panel>
 
 <panel type="seamless" header="##### Configuring `data.csv`">
 
-The `data.csv` file contains three columns - the role of the user (Student, Tutor and Admin), the user's Github username and the team allocated to the user. Do add your own username to this file in order to use CATcher.
+The `data.csv` file contains three columns - the role of the user (Student, Tutor and Admin), the user's GitHub username and the team allocated to the user. Do add your own username to this file in order to use CATcher.
 
 <box type="info" seamless>
 
@@ -60,7 +60,7 @@ Do note the following:
 
 ### Populating issues in CATcher repositories
 
-In CATcher, submitting a bug in the Bug Reporting phase will create a Github issue in the corresponding repository with the appropriate format and labels. For subsequent phases, the responses are stored as Github comments of that particular issue, and these comments must be of a certain format for CATcher to parse them correctly. 
+In CATcher, submitting a bug in the Bug Reporting phase will create a GitHub issue in the corresponding repository with the appropriate format and labels. For subsequent phases, the responses are stored as comments of that particular issue, and these comments must be of a certain format for CATcher to parse them correctly. 
 
 <panel type="seamless" header="##### Team Response Phase">
 
@@ -111,7 +111,7 @@ The JSON file supplied should only consist of **one key-pair value**, where the 
 
 `profileName` refers to the profile name displayed in the session select page. `encodedText` refers to the repository which stores the required settings for your custom session. The `encodedText` will be in the format of `organisation/repository`.
 
-> **Note**: You **must** have both of these fields in each `Profile` and the values for these fields **should not be empty**! Else, the `.json` file that you have supplied will not be parsed successfully.
+> **Note**: You **must** have both of these fields in each `Profile` and the values for these fields **should not be empty**! Else, the JSON file that you have supplied will not be parsed successfully.
 
 </panel>
 
