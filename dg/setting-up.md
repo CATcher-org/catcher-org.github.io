@@ -79,6 +79,74 @@ If you wish to know more about them, you can visit our [tools page](tools.html).
 
 ### Backend
 
+<panel header="**Task 1: Add new label**" type="primary">
+  
+  **Task 1: Add new label `type.UiFlaw`**
+
+  Currently, there are only 3 types of bugs in CATcher: `type.DocumentationBug`, `type.FeatureFlaw` and `type.FunctionalityBug`. Let's add a fourth one, `type.UiFlaw` to understand the backend.
+
+  **Your Task**
+
+  Add a new label `type.UiFlaw` to the existing list of labels. You may choose a color and a definition to your liking.
+
+  <panel header="Hint 1" type="info">
+
+  First, you need to locate the files responsible for labels. Note that this is a backend task, so it is unlikely to be an Angular component.
+
+  </panel>
+  <panel header="Hint 2" type="info">
+
+  You may encounter 2 files that handle labels: `label.service.ts` and `label.model.ts`. `label.model.ts` contains the class responsible for Labels. It does not contain the list of labels used in CATcher. Therefore, look into `label.service.ts`.
+
+  </panel>
+  <panel header="Hint 3" type="info">
+
+  In `label.service.ts`, you will see how the various labels are defined. Can you emulate the other labels and add the new label?
+
+  </panel>
+
+  <panel header="Suggested solution" type="info">
+
+  In `label.service.ts`, you should declare a new definition of `type.UiFlaw`, then add it to the `LABEL_DEFINITIONS` and `REQUIRED_LABELS` under `REQUIRED_LABELS['type']['UiFlaw']`.
+
+  See the changes [here](https://github.com/chunweii/CATcher/commit/e34cc70be83ad14ed5bde0e6941894f0d76c03bd).
+
+  </panel>
+</panel>
+
+<panel header="**Task 2: Delete labels that are not in use**" type="primary">
+
+  **Task 2: Delete labels that are not in use**
+
+  Upon creation of a new repository, Github will automatically create default labels, which we may not use in CATcher. The user might also have added other labels on their own.
+  
+  **Your task**
+  
+  Add a feature to delete all labels that are not required by CATcher upon login.
+
+  <panel header="Hint 1" type="info">
+
+  Similar to the first task, one of the files responsible for this feature is `label.service.ts`. However, we need to interact with the Github API to delete labels. Can you find which service is responsible for handling Github API calls? 
+
+  </panel>
+  <panel header="Hint 2" type="info">
+
+  Refer to the <tooltip content="The version of octokit may differ. The version used by CATcher can be found in `package.json`."><a target="none" href="https://octokit.github.io/rest.js">octokit documentation</a></tooltip> for details on which Github API call to use.
+
+  </panel>
+  <panel header="Suggested solution" type="info">
+
+  1. Create a new method `deleteLabel(labelName)` in `github.service.ts`. Call the <tooltip content="See [the octokit docs](https://octokit.github.io/rest.js/v18#issues-delete-label)">octokit function</tooltip> to delete label.
+
+  2. In `label.service.ts`, edit the private `LabelService.ensureRepoHasRequiredLabels(actualLabels, requiredLabels)` method, by iterating through `actualLabels` and deleting every label in `actualLabels` that are not present in `requiredLabels`.
+
+  Refer [here](https://github.com/chunweii/CATcher/commit/eb38328b263aa08376fb6e5e47b83c4a07d00650) for the full changes.
+
+  </panel>
+
+</panel>
+
+
 ### Frontend
 
 <panel header="**Task 1: Make error snack bars automatically close**" type="primary">
