@@ -36,7 +36,7 @@ If the `public_data` repository was forked, the `settings.json` file would look 
 
 The `openPhases` property specifies the phases that are open. It is recommended to leave all the phases open for testing purposes. Do note that the Tutor Moderation phase is still under development. 
 
-The other four properties specify the name of the repositories that CATcher will store and retrieve from. In the example above, CATcher will retrive issues from the `bugreporting` repository for the Bug Reporting and Tester Response phases, and will retrive issues from the `pe-results` and `pe-evaluation` repositories for the Team Response and Tutor Moderation phases accordingly. If the repositories do not exist, CATcher will create them automatically.
+The other four properties specify the name of the repositories that CATcher will store and retrieve from. In the example above, CATcher will retrieve issues from the `bugreporting` repository for the Bug Reporting and Tester Response phases, and will retrive issues from the `pe-results` and `pe-evaluation` repositories for the Team Response and Tutor Moderation phases accordingly. If the repositories do not exist, CATcher will create them automatically.
 
 <box type="info" seamless>
 
@@ -90,7 +90,7 @@ In CATcher, submitting a bug in the Bug Reporting phase will create a GitHub iss
 
 ### Loading the custom session
 
-The custom session will not present in the default dropdown list on CATcher's startup page, so it can be loaded by clicking on the **file icon** beside the session dropdown. Following which, submit a file with the `.json` file extension, where the format is specified below.
+The custom session will not be present in the default dropdown list on CATcher's startup page, so it can be loaded by clicking on the **file icon** beside the session dropdown. Following which, submit a file with the `.json` file extension, where the format is specified below.
 
 <panel type="seamless" header="##### Session JSON file">
 
