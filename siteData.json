@@ -93,7 +93,10 @@
       "title": "DG: Testing",
       "headings": {
         "testing": "Testing",
-        "loading-custom-sessions": "Loading custom sessions",
+        "setting-up-custom-catcher-sessions": "Setting up custom CATcher sessions",
+        "setting-up-github-repositories": "Setting up GitHub repositories",
+        "populating-issues-in-catcher-repositories": "Populating issues in CATcher repositories",
+        "loading-the-custom-session": "Loading the custom session",
         "testing-with-jasmine": "Testing with Jasmine",
         "angular-testbed-utility": "Angular testBed utility",
         "e2e-testing": "E2E testing",
