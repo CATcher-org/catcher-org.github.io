@@ -36,7 +36,7 @@ If the `public_data` repository was forked, the `settings.json` file would look 
 
 The `openPhases` property specifies the phases that are open. It is recommended to leave all the phases open for testing purposes. Do note that the Tutor Moderation phase is still under development. 
 
-The other four properties specify the name of the repositories that CATcher will store and retrieve from. In the example above, CATcher will retrieve issues from the `bugreporting` repository for the Bug Reporting and Tester Response phases, and will retrive issues from the `pe-results` and `pe-evaluation` repositories for the Team Response and Tutor Moderation phases accordingly. If the repositories do not exist, CATcher will create them automatically.
+The other four properties specify the name of the repositories that CATcher will store and retrieve from. In the example above, CATcher will retrieve issues from the `bugreporting` repository for the Bug Reporting and Tester Response phases, and will retrieve issues from the `pe-results` and `pe-evaluation` repositories for the Team Response and Tutor Moderation phases accordingly. If the repositories do not exist, CATcher will create them automatically.
 
 <box type="info" seamless>
 
