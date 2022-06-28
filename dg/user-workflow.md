@@ -134,6 +134,9 @@ Body:
 {same as interim repo}
 ```
 Add a comment:
+
+<div id="team-response-format">
+
 ```
 # Team's Response
 
@@ -152,6 +155,7 @@ But it's a minor bug.
 ## Duplicate status (if any):
 Duplicate of #1234
 ```
+</div>
 </panel>
 
 * Labels: `severity.*`, `type.*`, `response.*`, `duplicate`
@@ -160,7 +164,7 @@ Duplicate of #1234
 
 Add a comment to the original issue in `tester/repo-name`, in the following format:
 
-<panel type="seamless" header="Formats used">
+<panel type="seamless" header="Formats used" id="tester-response-format">
 
 ```
 # Team's Response
