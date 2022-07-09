@@ -12,6 +12,17 @@ This page contains information useful for testing of CATcher.
 
 -------------------------------------------------------------------------------------
 
+## Dev commands
+
+Given below are different commands you can use to run the tests.
+
+|Command|Description|
+|--|--|
+ | `npm run lint` | Runs the linter (TSLint) |
+ | `npm run test` | Runs the tests           |
+ | `npm run test -- "--code-coverage"` | Runs the tests and generates code coverage report under `tests/coverage` folder |
+
+-------------------------------------------------------------------------------------
 ## Setting up custom CATcher sessions
 
 Sometimes, it may be useful to create and use your own custom CATcher session for manual testing, instead of using the default session on `CATcher-org` that is shared among the CATcher developers. 
