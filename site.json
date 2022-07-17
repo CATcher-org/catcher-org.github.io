@@ -10,23 +10,23 @@
     "_site/*",
     "site.json",
     "*.md",
-    "*.mbd",
-    "*.mbdf",
     "*.njk",
-    ".git/*"
+    ".git/*",
+    "node_modules/*"
   ],
+  "pagesExclude": ["node_modules/*"],
   "pages": [
     {
-      "glob": ["**/*.+(md|mbd)"]
+      "glob": ["**/*.md"]
     },
     {
-      "glob": ["dg/*.+(md|mbd)"],
+      "glob": ["dg/*.md"],
       "frontmatter": {
         "layout": "dg-layout.md"
       }
     },
     {
-      "glob": ["ug/*.+(md|mbd)"],
+      "glob": ["ug/*.md"],
       "frontmatter": {
         "layout": "ug-layout.md"
       }
