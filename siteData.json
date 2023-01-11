@@ -68,6 +68,7 @@
       "title": "DG: Project management",
       "headings": {
         "project-management": "Project management",
+        "dev-commands": "Dev commands",
         "automated-release": "Automated release",
         "manual-release": "Manual release"
       },
@@ -93,6 +94,7 @@
       "title": "DG: Testing",
       "headings": {
         "testing": "Testing",
+        "dev-commands": "Dev commands",
         "setting-up-custom-catcher-sessions": "Setting up custom CATcher sessions",
         "setting-up-github-repositories": "Setting up GitHub repositories",
         "populating-issues-in-catcher-repositories": "Populating issues in CATcher repositories",
