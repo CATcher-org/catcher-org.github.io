@@ -28,24 +28,12 @@ This section guides you through the steps required to set up your computer for d
 
 ## Dev commands
 
-Given below are different commands you can run to build the application in different operating systems.
+Given below are different commands you can use to run the app locally.
 
 |Command|Description|
 |--|--|
 |`npm start`| Start the app from Electron in development mode. |
 |`npm run ng:serve:web`| Start the app from the browser in development mode. |
-|`npm run build`| Build the app. Your built files are in the /dist folder. |
-|`npm run build:prod`| Build the app with Angular aot. Your built files are in the /dist folder. |
-|`npm run electron:local`| Builds your application and start electron
-|`npm run electron:linux`| Builds your application and creates an app consumable on linux system |
-|`npm run electron:windows`| On a Windows OS, builds your application and creates an app consumable in windows 32/64 bit systems |
-|`npm run electron:mac`|  On a MAC OS, builds your application and generates a `.app` file of your application that can be run on Mac |
-|`npm run deploy:web`| Will deploy the app onto the Github's `gh-pages` branch. <br/> Prerequisites:<br/> 1. Add Environment variable of `GH_TOKEN=<Github Personal Access Token>` with the permission of `repo`. <br/>2. `build:prod:web` command's `--base-href` argument in `package.json` must have the following format `https://<OrgName or Username>.github.io/CATcher/`. <br/> 3. If you are deploying outside of CATcher-org then it would be necessary to create a new OAuth application and change the `clientId` in `environment.prod.ts` <br/> 4. If you are deploying outside of CATcher-org, you would also need to deploy your own instance of proxy server using [gatekeeper](https://github.com/CATcher-org/gatekeeper) and change the appropriate variables in `environment.prod.ts`. |
- | `npm run lint` | Runs the linter (TSLint) |
- | `npm run test` | Runs the tests           |
- | `npm run test -- "--code-coverage"` | Runs the tests and generates code coverage report under `tests/coverage` folder |
-
-We have a GitHub Actions' workflow that can perform some of the tasks above with a single-click.
 
 -----------------------------------------------------------------------------------
 
