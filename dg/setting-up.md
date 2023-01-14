@@ -13,16 +13,17 @@ This section guides you through the steps required to set up your computer for d
 ## Getting started
 
 **Prerequisites:**
-* [Node.js 12](https://nodejs.org/en/blog/release/v12.20.0/) -- (run `node -v` in your OS terminal to check the version of Node on your computer)
+* [Node.js 14](https://nodejs.org/en/blog/release/v14.21.2/) -- (run `node -v` in your OS terminal to check the version of Node on your computer)
 
 **Recommended:**
 * IDE: Visual Studio Code
 
 **Steps:**
 1. Fork this repository into your Github account.
-1. Clone the forked repository into your computer.
-1. Install dependencies with npm: Run `npm install`.
-1. Compile and start the application: Run `npm start`.
+2. Clone the forked repository into your computer.
+3. Install dependencies with npm: Run `npm install`
+    - *a list of warnings is expected and no action needs to be taken before proceeding.*
+4. Compile and start the application in browser: Run `npm run ng:serve:web`.
 
 -----------------------------------------------------------------------------------
 
@@ -32,8 +33,10 @@ Given below are different commands you can use to run the app locally.
 
 |Command|Description|
 |--|--|
-|`npm start`| Start the app from Electron in development mode. |
+|`npm start`| ~~Start the app from Electron in development mode.~~ |
 |`npm run ng:serve:web`| Start the app from the browser in development mode. |
+
+*Note: we are currently moving towards web-only application and therefore Electron is currently not supported.*
 
 -----------------------------------------------------------------------------------
 
