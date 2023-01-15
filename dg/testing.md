@@ -101,7 +101,7 @@ The format of the JSON file to be submitted is as follows:
 "profiles": [
     {
       "profileName": "CATcher",
-      "encodedText": "CATcher-org/public_data"
+      "repoName": "CATcher-org/public_data"
     }
   ]
 }
