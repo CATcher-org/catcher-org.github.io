@@ -107,9 +107,9 @@ The format of the JSON file to be submitted is as follows:
 }
 ```
 
-The JSON file supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `encodedText` fields.
+The JSON file supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `repoName` fields.
 
-`profileName` refers to the profile name displayed in the session select page. `encodedText` refers to the repository which stores the required settings for your custom session. The `encodedText` will be in the format of `organisation/repository`.
+`profileName` refers to the profile name displayed in the session select page. `repoName` refers to the repository which stores the required settings for your custom session. The `repoName` will be in the format of `organisation/repository`.
 
 > **Note**: You **must** have both of these fields in each `Profile` and the values for these fields **should not be empty**! Else, the JSON file that you have supplied will not be parsed successfully.
 
