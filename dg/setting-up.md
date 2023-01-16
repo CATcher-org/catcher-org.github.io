@@ -22,7 +22,7 @@ This section guides you through the steps required to set up your computer for d
 1. Fork this repository into your Github account.
 2. Clone the forked repository into your computer.
 3. Install dependencies with npm: Run `npm install`
-    - *a list of warnings is expected and no action needs to be taken before proceeding.*
+    - *a list of warnings can be expected and no action needs to be taken before proceeding.*
 4. Compile and start the application in browser: Run `npm run ng:serve:web`.
 
 -----------------------------------------------------------------------------------
@@ -33,8 +33,8 @@ Given below are different commands you can use to run the app locally.
 
 |Command|Description|
 |--|--|
-|`npm start`| Start the app from Electron in development mode. |
 |`npm run ng:serve:web`| Start the app from the browser in development mode. |
+|`npm start`| Start the app from Electron in development mode. |
 
 *Note that our development focus is mainly on Web-version and Electron is served as a backup plan when web version fails. You are encouraged to start working with Web version as a beginner first.*
 
