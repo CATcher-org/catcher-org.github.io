@@ -13,39 +13,30 @@ This section guides you through the steps required to set up your computer for d
 ## Getting started
 
 **Prerequisites:**
-* [Node.js 12](https://nodejs.org/en/blog/release/v12.20.0/) -- (run `node -v` in your OS terminal to check the version of Node on your computer)
+* [Node.js 14](https://nodejs.org/en/blog/release/v14.21.2/) -- (run `node -v` in your OS terminal to check the version of Node on your computer)
 
 **Recommended:**
 * IDE: Visual Studio Code
 
 **Steps:**
 1. Fork this repository into your Github account.
-1. Clone the forked repository into your computer.
-1. Install dependencies with npm: Run `npm install`.
-1. Compile and start the application: Run `npm start`.
+2. Clone the forked repository into your computer.
+3. Install dependencies with npm: Run `npm install`
+    - *a list of warnings on outdated dependencies is to be expected and no action needs to be taken before proceeding.*
+4. Compile and start the application in browser: Run `npm run ng:serve:web`.
 
 -----------------------------------------------------------------------------------
 
 ## Dev commands
 
-Given below are different commands you can run to build the application in different operating systems.
+Given below are different commands you can use to run the app locally.
 
 |Command|Description|
 |--|--|
-|`npm start`| Start the app from Electron in development mode. |
 |`npm run ng:serve:web`| Start the app from the browser in development mode. |
-|`npm run build`| Build the app. Your built files are in the /dist folder. |
-|`npm run build:prod`| Build the app with Angular aot. Your built files are in the /dist folder. |
-|`npm run electron:local`| Builds your application and start electron
-|`npm run electron:linux`| Builds your application and creates an app consumable on linux system |
-|`npm run electron:windows`| On a Windows OS, builds your application and creates an app consumable in windows 32/64 bit systems |
-|`npm run electron:mac`|  On a MAC OS, builds your application and generates a `.app` file of your application that can be run on Mac |
-|`npm run deploy:web`| Will deploy the app onto the Github's `gh-pages` branch. <br/> Prerequisites:<br/> 1. Add Environment variable of `GH_TOKEN=<Github Personal Access Token>` with the permission of `repo`. <br/>2. `build:prod:web` command's `--base-href` argument in `package.json` must have the following format `https://<OrgName or Username>.github.io/CATcher/`. <br/> 3. If you are deploying outside of CATcher-org then it would be necessary to create a new OAuth application and change the `clientId` in `environment.prod.ts` <br/> 4. If you are deploying outside of CATcher-org, you would also need to deploy your own instance of proxy server using [gatekeeper](https://github.com/CATcher-org/gatekeeper) and change the appropriate variables in `environment.prod.ts`. |
- | `npm run lint` | Runs the linter (TSLint) |
- | `npm run test` | Runs the tests           |
- | `npm run test -- "--code-coverage"` | Runs the tests and generates code coverage report under `tests/coverage` folder |
+|`npm start`| Start the app from Electron in development mode. |
 
-We have a GitHub Actions' workflow that can perform some of the tasks above with a single-click.
+*Note that our development focus is mainly on Web-version and Electron is served as a backup plan when web version fails. You are encouraged to start working with Web version as a beginner first.*
 
 -----------------------------------------------------------------------------------
 

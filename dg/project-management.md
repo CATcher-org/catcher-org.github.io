@@ -12,6 +12,24 @@ This page contains info relevant to project management activities, typically don
 
 -------------------------------------------------------------------------------------
 
+## Dev commands
+
+Given below are different commands you can run to build the application in different operating systems.
+
+|Command|Description|
+|--|--|
+|`npm run build`| Build the app. Your built files are in the /dist folder. |
+|`npm run build:prod`| Build the app with Angular aot. Your built files are in the /dist folder. |
+|`npm run deploy:web`| Will deploy the app onto the Github's `gh-pages` branch. <br/> Prerequisites:<br/> 1. Add Environment variable of `GH_TOKEN=<Github Personal Access Token>` with the permission of `repo`. <br/>2. `build:prod:web` command's `--base-href` argument in `package.json` must have the following format `https://<OrgName or Username>.github.io/CATcher/`. <br/> 3. If you are deploying outside of CATcher-org then it would be necessary to create a new OAuth application and change the `clientId` in `environment.prod.ts` <br/> 4. If you are deploying outside of CATcher-org, you would also need to deploy your own instance of proxy server using [gatekeeper](https://github.com/CATcher-org/gatekeeper) and change the appropriate variables in `environment.prod.ts`. |
+|`npm run electron:local`| Builds your application and start electron |
+|`npm run electron:linux`| Builds your application and creates an app consumable on linux system |
+|`npm run electron:windows`| On a Windows OS, builds your application and creates an app consumable in windows 32/64 bit systems |
+|`npm run electron:mac`|  On a MAC OS, builds your application and generates a `.app` file of your application that can be run on Mac |
+
+*Note that our development focus is mainly on Web-version and Electron is served as a backup plan when web version fails.*
+
+-------------------------------------------------------------------------------------
+
 ## Automated release
 
 Follow these steps to release a new version of CATcher using a GitHub Actions' workflow.

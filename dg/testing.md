@@ -12,6 +12,17 @@ This page contains information useful for testing of CATcher.
 
 -------------------------------------------------------------------------------------
 
+## Dev commands
+
+Given below are different commands you can use to run the tests.
+
+|Command|Description|
+|--|--|
+ | `npm run lint` | Runs the linter (TSLint) |
+ | `npm run test` | Runs the tests           |
+ | `npm run test -- "--code-coverage"` | Runs the tests and generates code coverage report under `tests/coverage` folder |
+
+-------------------------------------------------------------------------------------
 ## Setting up custom CATcher sessions
 
 Sometimes, it may be useful to create and use your own custom CATcher session for manual testing, instead of using the default session on `CATcher-org` that is shared among the CATcher developers. 
@@ -101,15 +112,15 @@ The format of the JSON file to be submitted is as follows:
 "profiles": [
     {
       "profileName": "CATcher",
-      "encodedText": "CATcher-org/public_data"
+      "repoName": "CATcher-org/public_data"
     }
   ]
 }
 ```
 
-The JSON file supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `encodedText` fields.
+The JSON file supplied should only consist of **one key-pair value**, where the key is `"profiles"` and the value is an array of `Profiles`, where each `Profile` is an object containing the `profileName` and `repoName` fields.
 
-`profileName` refers to the profile name displayed in the session select page. `encodedText` refers to the repository which stores the required settings for your custom session. The `encodedText` will be in the format of `organisation/repository`.
+`profileName` refers to the profile name displayed in the session select page. `repoName` refers to the repository which stores the required settings for your custom session. The `repoName` will be in the format of `organisation/repository`.
 
 > **Note**: You **must** have both of these fields in each `Profile` and the values for these fields **should not be empty**! Else, the JSON file that you have supplied will not be parsed successfully.
 
