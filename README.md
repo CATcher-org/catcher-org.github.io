@@ -38,9 +38,9 @@ This section guides you through the steps required to set up a local development
 ## Prerequisites
 
 You need Node 14 to develop this project. 
-Run `node -v` in your OS terminal to check the version of Node on your computer. 
+Run `node -v` in your OS terminal to check the version of Node on your computer.
 
-If you do not have Node 14 installed in your computer, click on [this link](https://nodejs.org/en/blog/release/v14.21.2/) to download Node 14.
+If you do not have Node 14 installed in your computer, click on [this link](https://nodejs.org/en/download/releases/) to download Node 14.
 
 ## Getting Started
 
@@ -48,7 +48,7 @@ If you do not have Node 14 installed in your computer, click on [this link](http
 
 2. Clone the forked repository into your computer.
 
-3. Install Markbind with npm: Run `npm install -g markbind-cli`.
+3. Install MarkBind with npm: Run `npm install -g markbind-cli`.
 
 4. Compile and start the application: Run `markbind serve`.
-    - **Note**: If this step fails, it may be possible that the port that `Markbind` is attempting to serve the site in is being used. This may be rectified with the following command: `markbind serve -p <available_port>`.
+    - **Note**: If this step fails, it may be possible that the port that `MarkBind` is attempting to serve the site in is being used. This may be rectified with the following command: `markbind serve -p <available_port>`.
