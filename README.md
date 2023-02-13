@@ -7,7 +7,7 @@ This section guides you through the steps required to set up a development conta
 
 Install the following programs:
 
-- [VSCode](https://code.visualstudio.com/) / [VSCodium](https://vscodium.com/)
+- [VSCode](https://code.visualstudio.com/)
 - [Docker Desktop](https://www.docker.com/)
 
 ## Getting Started
