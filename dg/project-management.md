@@ -34,7 +34,7 @@ Given below are different commands you can run to build the application in diffe
 
 Follow these steps to release a new version of CATcher using a GitHub Actions' workflow.
 1. Create and merge a Pull Request that updates CATcher's version number in the `package.json` file.
-2. Navigate to the `Actions` Tab of the `CATcher` repository and start the `Draft Deployment` Workflow.
+2. Navigate to the `Actions` Tab of the `CATcher` repository and start the `Version Deployment` Workflow.
     - This workflow deploys the web app and creates a Draft Release containing the desktop app's executables
 3. Edit the Draft Release:
     - Update the description with a changelog that describes any new features or bug fixes
