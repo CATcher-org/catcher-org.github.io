@@ -9,12 +9,14 @@
 The CATcher project is based in the [School of Computing, National University of Singapore](https://www.comp.nus.edu.sg/).
 
 ## Current team members
-* Low Jun Kai, Sean (team lead)
-* Ding Yuchen (senior developer)
-* Kang Su Min (senior developer)
-* Goh Yee Chong, Gabriel (developer)
-* Lee Chun Wei (developer)
-* Lee Xiong Jie, Isaac (developer)
+* Kang Su Min (team lead)
+* Lee Chun Wei (senior developer)
+* Goh Yee Chong, Gabriel (senior developer)
+* Lee Xiong Jie, Isaac (senior developer)
+* Li Zhaoqi (developer)
+* Sun Xinyu (developer)
+* Vignesh Sankar Iyer (developer)
+* Wong Chee Hong (developer)
 
 ## Past team members
 
@@ -32,4 +34,14 @@ The CATcher project is based in the [School of Computing, National University of
 * Ngo Duc Binh (developer)
 
 ### AY2021/22 
+* Low Jun Kai, Sean (team lead)
+* Ding Yuchen (senior developer)
 * Chang Rui Feng (developer)
+
+### AY2021/22 Summer Programme
+* Cedric Ong (developer)
+* James Yeap (developer)
+* Kevin Chua (developer)
+* Nguyen Hong Anh (developer)
+* Sean Ng Shan Sheng (developer)
+
