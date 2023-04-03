@@ -23,7 +23,7 @@ Once the web app is launched, it will prompt you to enter the session you are pa
 
 ## Using the Web app
 
-The CATcher web app is recommended, and can be accessed at https://catcher-org.github.io/CATcher. Please ensure your browser does not block pop-up windows from our web app.
+The CATcher web app can be accessed at https://catcher-org.github.io/CATcher. Please ensure your browser does not block pop-up windows from our web app.
 
 Ad-blockers may need to be disabled if they block pop-ups.
 
