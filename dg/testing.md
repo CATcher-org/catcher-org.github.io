@@ -162,7 +162,7 @@ You can refer to the [AssigneeComponent test](https://github.com/CATcher-org/CAT
 
 ### Running E2E tests
 
-<tooltip content="end-to-end tests">E2E tests</tooltip> can be executed using `npm run e2e`. You should see CATcher launch in an instance of Chromium, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine. 
+<tooltip content="end-to-end tests">E2E tests</tooltip> can be executed using `npm run e2e`. You should see CATcher launch in an instance of Chromium, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine. You can also run e2e tests against `Firefox`,`Chromium`,`Webkit` in headless mode if you run `npx playwright test`
 
 Alternatively, it is highly recommended that you install [Playwright Test for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which would allow you to run specific tests, utilize the pick locator when writing tests, etc.
 
