@@ -168,7 +168,7 @@ Alternatively, it is highly recommended that you install [Playwright Test for VS
 
 <box type="warning" seamless>
 
-Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox). You will be prompted by PlayWright to install your browsers with this command `npx playwright install --with-deps` if they are not detected.
+Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox). You will be prompted by Playwright to install your browsers with this command `npx playwright install --with-deps` if they are not detected.
 </box>
 
 E2E tests simulate how an user will interact with our application. However, to avoid hitting the GitHub API in our tests, we currently do not perform E2E tests on the production version of CATcher. Instead, a test version of our application where mock data is used to simulate the GitHub API is used in our E2E tests. Under the hood, Playwright first activates this test version of our server using `npm run ng:serve:test` before running tests.
