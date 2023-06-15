@@ -162,33 +162,26 @@ You can refer to the [AssigneeComponent test](https://github.com/CATcher-org/CAT
 
 ### Running E2E tests
 
-<tooltip content="end-to-end tests">E2E tests</tooltip> can be executed using `npm run e2e`. You should see CATcher launch in an instance of Google Chrome, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine.
+<tooltip content="end-to-end tests">E2E tests</tooltip> can be executed using `npm run e2e`. You should see CATcher launch in an instance of Chromium, with some automated actions occurring on it. Note: Google Chrome needs to be installed on the machine. You can also run e2e tests against `Firefox`,`Chromium`,`Webkit` in headless mode if you run `npx playwright test`
 
-Unlike the production version of CATcher, we do not use the actual GitHub API in the E2E tests. Mock data is used to simulate the GitHub API. You can run `npm run ng:serve:test` to run CATcher in this "offline" mode (to further develop or debug the E2E tests).
-The following additional parameters would allow for further customisation,
-
-| Additional Parameter | Default | Description | Full Command Example | Command Explanation
-| :---: | :---: | :-----: | :-------: | :------: |
-| `--protractor-config=e2e/protractor.*.conf.js` | `protractor.conf.js` | Allows selection of the Protractor configuration file | `npm run e2e -- --protractor-config=e2e/protractor.firefox.conf.js` | Runs E2E Tests on the Firefox Browser |
-| `--suite=*` | All Suites | Runs E2E Tests for specific suites | `npm run e2e -- --suite=login,bugReporting` | Run E2E Tests from Login and BugReporting Suites only |
+Alternatively, it is highly recommended that you install [Playwright Test for VSCode](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright), which would allow you to run specific tests, utilize the pick locator when writing tests, etc.
 
 <box type="warning" seamless>
 
-Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox).
+Relevant Browsers must be installed prior to running tests (i.e. Chrome, Firefox). You will be prompted by Playwright to install your browsers with this command `npx playwright install --with-deps` if they are not detected.
 </box>
 
-### Troubleshooting conflicts between the versions of the browser and browser driver
+E2E tests simulate how an user will interact with our application. However, to avoid hitting the GitHub API in our tests, we currently do not perform E2E tests on the production version of CATcher. Instead, a test version of our application where mock data is used to simulate the GitHub API is used in our E2E tests. Under the hood, Playwright first activates this test version of our server using `npm run ng:serve:test` before running tests.
 
-If tests fail on your machine due to mismatches between the versions of the browser and the browser driver, you can use the [`webdriver-manager`](https://github.com/angular/webdriver-manager#readme) tool to install the right version of the driver.  By default, running `webdriver-manager update` updates all drivers to the latest version, but particular versions can be specified as options.
+To cut down the time running Playwright tests, you can first start the testing version manually using `npm run ng:serve:test`. Subsequent runs of Playwright will see that a test server is live and run the E2E tests again them. You can also run `npm run ng:serve:test` to further develop or debug the E2E tests. 
 
-### Protractor Configuration
+### Playwright Configuration
 
-E2E Tests are run using [Protractor](http://www.protractortest.org/#/) testing framework.
+E2E Tests are run using [Playwright](https://playwright.dev/) testing framework.
 
-- Protractor primarily requires the `*.conf.js` files to define E2E Testing Environments (this includes Browser Details, Base URL, etc...)
-- The base configuration data is stored in `protractor.base.conf.js` which is then extended by separate configuration files for individual browsers as well as the CI/CD pipeline.
-- E2E Tests are typically split into `Page-Objects Files` and `Test Files` in accordance with the [Protractor Style Guide](http://www.protractortest.org/#/style-guide) (more information regarding the interaction between the aforementioned filetypes can be found there).
-- E2E Tests are also grouped into suites based on the Application's Phase (i.e. Login, Bug-Reporting). Currently defined suite information is located in the `protractor.base.conf.js` file as well.
+- Playwright primarily requires the `playwright.config.ts` file located at the project root to define E2E Testing environments. This includes the list of browsers (or "projects" as they call it), base URL, number of workers etc.
+- E2E Tests are typically split into `Page-Objects Files` and `Test Files` in accordance with the [Page Object Model](https://playwright.dev/docs/pom)
+- E2E Tests are also grouped into files based on the Application's Phase (i.e. Login, Bug-Reporting).
 
 ### How the E2E tests work
 
@@ -203,6 +196,6 @@ E2E Tests are run with the following stages:
 3. Mock Service Injections
    - Once CATcher switches to E2E test mode, it creates mocks of some services, in order to simulate behaviour that is outside the scope of E2E Testing. This includes authentication, and communication with GitHub (via its APIs).
    - These Service Injections are carried out in the respective `*-module.ts` files with the help of Factories (located in `/src/app/core/services/factories`) that check the current build environment and make the Service Replacements accordingly.
-4. Browser Action Automation using Protractor
-   - With the application ready for testing, we then utilize `Protractor` to run test cases that are located in the `/e2e` directory.
+4. Browser Action Automation using Playwright
+   - With the application ready for testing, we then utilize `Playwright` to run test cases that are located in the `/e2e` directory.
 
