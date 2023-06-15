@@ -98,6 +98,6 @@ with(this){return _c('ul',[_c('li',[_v("Show ticks for each dispute")]),_v(" "),
 with(this){return _c('ul',[_c('li',[_v("Allow tutor to change other labels")]),_v(" "),_c('li',[_v("The "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("pending.x")]),_v(" label will be removed if all tasks are done")]),_v(" "),_c('li',[_v("Allow adding an "),_c('code',{pre:true,attrs:{"class":"hljs inline no-lang"}},[_v("Unsure")]),_v(" label, in case the tutor is unsure about the decision")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Wed, 5 Apr 2023, 4:28:49 UTC]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Thu, 15 Jun 2023, 14:51:57 UTC]")])])])}
 }];
   

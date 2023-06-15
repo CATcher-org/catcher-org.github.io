@@ -108,8 +108,7 @@
         "angular-testbed-utility": "Angular testBed utility",
         "e2e-testing": "E2E testing",
         "running-e2e-tests": "Running E2E tests",
-        "troubleshooting-conflicts-between-the-versions-of-the-browser-and-browser-driver": "Troubleshooting conflicts between the versions of the browser and browser driver",
-        "protractor-configuration": "Protractor Configuration",
+        "playwright-configuration": "Playwright Configuration",
         "how-the-e2e-tests-work": "How the E2E tests work"
       },
       "headingKeywords": {}
