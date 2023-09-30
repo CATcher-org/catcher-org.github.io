@@ -120,7 +120,6 @@
         "tools": "Tools",
         "type-script": "Type Script",
         "angular": "Angular",
-        "electron": "Electron",
         "graphql": "GraphQL",
         "oauth-2-0": "OAuth 2.0",
         "testing-tools": "Testing tools"
@@ -164,8 +163,6 @@
         "getting-started": "Getting started",
         "using-the-web-app": "Using the Web app",
         "safari-users": "Safari users",
-        "using-the-desktop-app": "Using the desktop app",
-        "troubleshooting": "Troubleshooting",
         "reporting-problems": "Reporting problems"
       },
       "headingKeywords": {}
