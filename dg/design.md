@@ -8,7 +8,7 @@
 
 # Design
 
-As described in the [_Tools_](tools.md) section, CATcher is an Angular application that is distributed both as a web and a desktop app. From a design perspective, there are no major differences between both versions.
+As described in the [_Tools_](tools.md) section, CATcher is an Angular application that is distributed as a web app.
 
 This page describes CATcher's design. As an Angular application, the different
 views of the CATcher app are built out of **components**, and the content displayed on these

@@ -34,9 +34,6 @@ Given below are different commands you can use to run the app locally.
 |Command|Description|
 |--|--|
 |`npm run ng:serve:web`| Start the app from the browser in development mode. |
-|`npm start`| Start the app from Electron in development mode. |
-
-*Note that our development focus is mainly on Web-version and Electron is served as a backup plan when web version fails. You are encouraged to start working with Web version as a beginner first.*
 
 -----------------------------------------------------------------------------------
 
