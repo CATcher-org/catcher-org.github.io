@@ -9,8 +9,7 @@
 The CATcher project is based in the [School of Computing, National University of Singapore](https://www.comp.nus.edu.sg/).
 
 ## Current team members
-* Kang Su Min (team lead)
-* Lee Chun Wei (senior developer)
+* Lee Chun Wei (team lead)
 * Goh Yee Chong, Gabriel (senior developer)
 * Lee Xiong Jie, Isaac (senior developer)
 * Li Zhaoqi (developer)
@@ -45,3 +44,5 @@ The CATcher project is based in the [School of Computing, National University of
 * Nguyen Hong Anh (developer)
 * Sean Ng Shan Sheng (developer)
 
+### AY2022/23
+* Kang Su Min (team lead)
