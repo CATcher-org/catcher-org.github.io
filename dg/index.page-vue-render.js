@@ -32,6 +32,6 @@ with(this){return _c('li',[_c('p',[_c('strong',[_v("The "),_c('a',{attrs:{"href"
 with(this){return _c('li',[_c('p',[_c('strong',[_v("The "),_c('a',{attrs:{"href":"/dg/future-directions.html"}},[_c('em',[_v("Future directions")])]),_v(" page")]),_v(" lists some ideas for improving CATcher in the future.")])])}
 },function anonymous(
 ) {
-with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sat, 30 Sept 2023, 18:09:07 UTC]")])])])}
+with(this){return _c('footer',[_c('div',{staticClass:"text-center"},[_c('small',[_v("["),_c('span',[_c('strong',[_v("Powered by")])]),_v(" "),_c('img',{attrs:{"src":"https://markbind.org/favicon.ico","width":"30"}}),_v(" "),_c('a',{attrs:{"href":"https://markbind.org/"}},[_v("MarkBind 4.1.0")]),_v(", generated on Sun, 1 Oct 2023, 9:23:46 UTC]")])])])}
 }];
   
