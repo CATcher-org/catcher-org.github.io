@@ -181,7 +181,7 @@ Add a comment to the original issue in `tester/repo-name`, in the following form
 **Reason for disagreement:**
 [replace this with your reason]
 
-<catcher-end-of-segment>
+<catcher-end-of-segment><hr>
 ```
 Example:
 
@@ -199,7 +199,7 @@ Team chose `Rejected`.
 **Reason for disagreement:**
 [replace this with your reason]
 
-<catcher-end-of-segment>
+<catcher-end-of-segment><hr>
 ## :question: Issue severity
 
 Team chose `Low`.
@@ -211,7 +211,7 @@ Originally `High`.
 **Reason for disagreement:**
 [replace this with your reason]
 
-<catcher-end-of-segment>
+<catcher-end-of-segment><hr>
 ## :question: Issue type
 
 Team chose `DocumentationBug`.
@@ -223,7 +223,7 @@ Originally `FunctionalityBug`.
 **Reason for disagreement:**
 [replace this with your reason]
 
-<catcher-end-of-segment>
+<catcher-end-of-segment><hr>
 ```
 </panel>
 
@@ -256,7 +256,7 @@ Originally `FunctionalityBug`.
 **Reason for disagreement:**
 It's a bug, not a typo.
 
-<catcher-end-of-segment>
+<catcher-end-of-segment><hr>
 ```
 </panel>
 
