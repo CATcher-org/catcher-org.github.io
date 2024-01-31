@@ -291,9 +291,9 @@ Example:
 ## :question: Issue type
 ### Team says:
 
-Team chose `DocumentationBug`.
+Team chose [`type.DocumentationBug`].
 
-Originally `FunctionalityBug`.
+Originally [`type.FunctionalityBug`].
 
 ### Tester says:
 I think it a functionality bug.
