@@ -192,7 +192,7 @@ Description of team's response
 # Items for the Tester to Verify
 ## :question: Issue response
 
-Team chose `response.Rejected`.
+Team chose `[response.Rejected]`.
 
 - [ ] I disagree
 
