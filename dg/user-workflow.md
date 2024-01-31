@@ -192,7 +192,7 @@ Description of team's response
 # Items for the Tester to Verify
 ## :question: Issue response
 
-Team chose `[response.Rejected]`.
+Team chose [`response.Rejected`].
 
 - [ ] I disagree
 
@@ -202,9 +202,9 @@ Team chose `[response.Rejected]`.
 <catcher-end-of-segment><hr>
 ## :question: Issue severity
 
-Team chose `[severity.Low]`.
+Team chose [`severity.Low`].
 
-Originally `[severity.High]`.
+Originally [`severity.High`].
 
 - [ ] I disagree
 
@@ -214,9 +214,9 @@ Originally `[severity.High]`.
 <catcher-end-of-segment><hr>
 ## :question: Issue type
 
-Team chose `[type.DocumentationBug]`.
+Team chose [`type.DocumentationBug`].
 
-Originally `[type.FunctionalityBug]`.
+Originally [`type.FunctionalityBug`].
 
 - [ ] I disagree
 
@@ -247,9 +247,9 @@ Example:
 ```
 ## :question: Issue type
 
-Team chose `[type.DocumentationBug]`.
+Team chose [`type.DocumentationBug`].
 
-Originally `[type.FunctionalityBug]`.
+Originally [`type.FunctionalityBug`].
 
 - [x] I disagree
 
