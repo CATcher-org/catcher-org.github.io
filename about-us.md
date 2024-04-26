@@ -14,8 +14,12 @@ The CATcher project is based in the [School of Computing, National University of
 * Lee Xiong Jie, Isaac (senior developer)
 * Li Zhaoqi (developer)
 * Sun Xinyu (developer)
-* Vignesh Sankar Iyer (developer)
-* Wong Chee Hong (developer)
+* Vignesh Sankar Iyer (senior developer)
+* Wong Chee Hong (senior developer)
+* Nguyen Khoi Nguyen (developer)
+* Nereus Ng Wei Bin (developer)
+* Arif Khalid (developer)
+* Misra Adithya (developer)
 
 ## Past team members
 
@@ -46,3 +50,10 @@ The CATcher project is based in the [School of Computing, National University of
 
 ### AY2022/23
 * Kang Su Min (team lead)
+* Lee Chun Wei (senior developer)
+* Goh Yee Chong, Gabriel (senior developer)
+* Lee Xiong Jie, Isaac (senior developer)
+* Li Zhaoqi (developer)
+* Sun Xinyu (developer)
+* Vignesh Sankar Iyer (developer)
+* Wong Chee Hong (developer)
