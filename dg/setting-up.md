@@ -27,13 +27,40 @@ This section guides you through the steps required to set up your computer for d
 
 -----------------------------------------------------------------------------------
 
+## Creating your local development environment
+
+1. Set up [Gatekeeper](https://github.com/CATcher-org/gatekeeper), a local server used to enable
+  client-side applications to perform OAuth with GitHub. Follow the instructions on the repository.
+2. Create a new GitHub organization to store all your repositories. More details can be found
+  [here.](../ug/instructors.md)
+3. Create a new GitHub OAuth application under the new GitHub organization. More details can be
+  found [here.](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)
+
+    Set the homepage URL to your organization's
+    [default homepage URL.](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#types-of-github-pages-sites)
+
+    Set the authorization callback's URL to `http://localhost:4200`.
+
+4. Start Gatekeeper with `npm run start` and take note of the local address of the server.
+
+5. Update `environment.gen.ts` with the appropriate base configuration such as:
+   - `accessTokenUrl`: local Gatekeeper server address
+   - `clientDataUrl`: `profiles.json` of your local `client_data` folder (see step (2) for more
+    information)
+   - `clientId`: client id of your GitHub app
+
+6. Start CATcher locally with `npm run ng:serve:web`, select a profile, and login to grant CATcher
+  access to your GitHub account to begin.
+
+-----------------------------------------------------------------------------------
+
 ## Dev commands
 
 Given below are different commands you can use to run the app locally.
 
-|Command|Description|
-|--|--|
-|`npm run ng:serve:web`| Start the app from the browser in development mode. |
+| Command                | Description                                         |
+| ---------------------- | --------------------------------------------------- |
+| `npm run ng:serve:web` | Start the app from the browser in development mode. |
 
 -----------------------------------------------------------------------------------
 
@@ -68,7 +95,7 @@ If you wish to know more about them, you can visit our [tools page](tools.html).
 ### Backend
 
 <panel header="**Task 1: Add new label**" type="primary">
-  
+
   **Task 1: Add new label `type.UiFlaw`**
 
   Currently, there are only 3 types of bugs in CATcher: `type.DocumentationBug`, `type.FeatureFlaw` and `type.FunctionalityBug`. Let's add a fourth one, `type.UiFlaw` to understand the backend.
@@ -107,14 +134,14 @@ If you wish to know more about them, you can visit our [tools page](tools.html).
   **Task 2: Delete labels that are not in use**
 
   Upon creation of a new repository, Github will automatically create default labels, which we may not use in CATcher. The user might also have added other labels on their own.
-  
+
   **Your task**
-  
+
   Add a feature to delete all labels that are not required by CATcher upon login.
 
   <panel header="Hint 1" type="info">
 
-  Similar to the first task, one of the files responsible for this feature is `label.service.ts`. However, we need to interact with the Github API to delete labels. Can you find which service is responsible for handling Github API calls? 
+  Similar to the first task, one of the files responsible for this feature is `label.service.ts`. However, we need to interact with the Github API to delete labels. Can you find which service is responsible for handling Github API calls?
 
   </panel>
   <panel header="Hint 2" type="info">
