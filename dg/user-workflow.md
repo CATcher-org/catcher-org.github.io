@@ -178,8 +178,7 @@ Add a comment to the original issue in `tester/repo-name`, in the following form
 
 - [ ] I disagree
 
-**Reason for disagreement:**
-[replace this with your reason]
+**Reason for disagreement:** [replace this with your reason]
 
 <catcher-end-of-segment><hr>
 ```
@@ -192,36 +191,33 @@ Description of team's response
 # Items for the Tester to Verify
 ## :question: Issue response
 
-Team chose [`response.Rejected`].
+Team chose [`response.Rejected`]
 
 - [ ] I disagree
 
-**Reason for disagreement:**
-[replace this with your reason]
+**Reason for disagreement:** [replace this with your reason]
 
 <catcher-end-of-segment><hr>
 ## :question: Issue severity
 
-Team chose [`severity.Low`].
+Team chose [`severity.Low`]
 
-Originally [`severity.High`].
+Originally [`severity.High`]
 
 - [ ] I disagree
 
-**Reason for disagreement:**
-[replace this with your reason]
+**Reason for disagreement:** [replace this with your reason]
 
 <catcher-end-of-segment><hr>
 ## :question: Issue type
 
-Team chose [`type.DocumentationBug`].
+Team chose [`type.DocumentationBug`]
 
-Originally [`type.FunctionalityBug`].
+Originally [`type.FunctionalityBug`]
 
 - [ ] I disagree
 
-**Reason for disagreement:**
-[replace this with your reason]
+**Reason for disagreement:** [replace this with your reason]
 
 <catcher-end-of-segment><hr>
 ```
@@ -247,14 +243,13 @@ Example:
 ```
 ## :question: Issue type
 
-Team chose [`type.DocumentationBug`].
+Team chose [`type.DocumentationBug`]
 
-Originally [`type.FunctionalityBug`].
+Originally [`type.FunctionalityBug`]
 
 - [x] I disagree
 
-**Reason for disagreement:**
-It's a bug, not a typo.
+**Reason for disagreement:** It's a bug, not a typo.
 
 <catcher-end-of-segment><hr>
 ```
@@ -291,9 +286,9 @@ Example:
 ## :question: Issue type
 ### Team says:
 
-Team chose [`type.DocumentationBug`].
+Team chose [`type.DocumentationBug`]
 
-Originally [`type.FunctionalityBug`].
+Originally [`type.FunctionalityBug`]
 
 ### Tester says:
 I think it a functionality bug.
