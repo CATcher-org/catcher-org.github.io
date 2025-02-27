@@ -62,6 +62,12 @@ More detail of the things mentioned above are given in the sections below.
 * Title and body as the tester entered.
 * Labels: `severity.*`, `type.*` (both compulsory)
 
+### [Script `S1c`] In the dry run: Tester-Repo → Team-Repo
+
+* Transfer the bug report to the respective team repo.
+* Labels are to be omitted (as the script doesn't have permission to add labels in team's repo) but mentioned in the body of the issue (for reference).
+* Image links can be kept as they are, as tester anonymity is not required.
+
 ---
 
 ## Bug Trimming Phase
@@ -124,13 +130,6 @@ Body:
 Notes:
 * Copy all labels
 * Apply the correct `tutorial.*` label and `team.*` label to indicate the receiving team
-
-
-### [Script `S1c`] In the dry run: Tester-Repo → Team-Repo
-
-* Transfer the bug report to the respective team repo.
-* Labels are to be omitted (as the script doesn't have permission to add labels in team's repo) but mentioned in the body of the issue (for reference).
-* Image links can be kept as they are, as tester anonymity is not required.
 
 ---
 
