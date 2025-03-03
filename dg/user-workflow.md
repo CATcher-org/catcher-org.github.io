@@ -19,16 +19,17 @@ Here is a brief explanation of each phase:
 1. **Bug reporting phase**
    1. Student testers test the software they have been assigned and report bugs through CATcher.
       These bugs are stored in a repo in the tester's GitHub account. e.g., `tester/pe`.
+   <box type="info" seamless>
+
+   During the PE dry run (which has only one phase and the anonymity is not required), the script `S1c` transfers bugs directly to the receiving team's issue tracker.
+   </box>
+1. **Bug trimming phase**
+   1. Student testers use CATcher to trim down the number of bugs reported, leaving only the most significant bugs. Student testers can also update the severity and type label to best fit the nature of the reported bug.
+      These bugs are stored in the same repo as `Bug reporting phase`.
    1. After the testing session is over, a script `S1a` transfers the bugs to an interim private repository (e.g., `module-org/pe-interim`), and another script `S1b` transfers the bugs from the interim repo to a central repo e.g., `module-org/pe-dev-response`.<br>
       Bugs are channelled through an interim repo to hide the identity of the tester.<br>
       Scripts used to transfer/process bugs between phases are not part of CATcher codebase at the moment. They are managed separately by teaching staff members.
-
-<box type="info" seamless>
-
-During the PE dry run (which has only one phase and the anonymity is not required), the script `S1c` transfers bugs directly to the receiving team's issue tracker.
-</box>
-
-2. **Dev response phase**
+1. **Dev response phase**
    1. Dev teams (i.e., teams that developed the target products) use CATcher to respond to bugs they received.
    1. At the end, a script `S2` transfers dev team's response back to the original bug reports in the tester's GitHub account e.g., `tester/pe`.
 1. **Tester response phase**
@@ -60,6 +61,22 @@ More detail of the things mentioned above are given in the sections below.
 
 * Title and body as the tester entered.
 * Labels: `severity.*`, `type.*` (both compulsory)
+
+### [Script `S1c`] In the dry run: Tester-Repo → Team-Repo
+
+* Transfer the bug report to the respective team repo.
+* Labels are to be omitted (as the script doesn't have permission to add labels in team's repo) but mentioned in the body of the issue (for reference).
+* Image links can be kept as they are, as tester anonymity is not required.
+
+---
+
+## Bug Trimming Phase
+
+### [CATcher] Trim Bug Reports
+
+* Disable editing of Title and body.
+* Close issue when issue deleted in CATcher, re-open issue when issue recovered in CATcher
+* Editable Labels: `severity.*`, `type.*` (both compulsory)
 
 ### [Script `S1a`] Tester-Repo → Interim-Repo
 
@@ -113,13 +130,6 @@ Body:
 Notes:
 * Copy all labels
 * Apply the correct `tutorial.*` label and `team.*` label to indicate the receiving team
-
-
-### [Script `S1c`] In the dry run: Tester-Repo → Team-Repo
-
-* Transfer the bug report to the respective team repo.
-* Labels are to be omitted (as the script doesn't have permission to add labels in team's repo) but mentioned in the body of the issue (for reference).
-* Image links can be kept as they are, as tester anonymity is not required.
 
 ---
 
