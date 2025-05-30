@@ -76,6 +76,11 @@ The sequence diagram below shows the OAuth flow for the CATcher web app.
 <br/><br/><br/>
 ![](../images/oauth-sequence-diagram.png)
 
+<box type="info">
+    The gatekeeper web service is managed and deployed seperately using heroku. This service is required due to security-related limitations imposed by Github, that prevent developers from implementing the OAuth Web Application Flow on a client-side only application. CATcher team is also responsible for managing the deployment of our gatekeeper service accordingly.
+    <br/><br/>
+    In the scenario where you are required to redeploy catcher-auth, you will need access as a collaborator on heroku to catcher-auth, do reach out to the project owner to be added as a collaborator.
+</box>
 -------------------------------------------------------------------
 
 ## Testing tools
